@@ -2,7 +2,7 @@ require("dotenv").config();
 let express = require("express"); 
 let cors = require("cors"); 
 let nodemailer = require("nodemailer");
-let app = express();
+let app = express(); 
 let mongoose = require("mongoose");
 let multer = require("multer");
 let aboutUsAchievementsSection = require("./models/about_us_page/aboutUsAchievementsSection");
