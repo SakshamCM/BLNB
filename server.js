@@ -2821,7 +2821,7 @@ let transporter = nodemailer.createTransport({
   secure: true,
   port: 465,
   auth: {
-    user: "sakshamverma.creativemonk@gmail.com",
+    user: "team.creativemonk@gmail.com",
     pass: "pmdf ptle tbwg vlbw",
   },
 });
