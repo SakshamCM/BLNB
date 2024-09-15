@@ -2827,10 +2827,10 @@ let transporter = nodemailer.createTransport({
 });
 
 app.post("/send-email", (req, res) => {
-  const { to, subject, text } = req.body;
+  const { from, to, subject, text } = req.body;
 
   const mailOptions = {
-    from: "creativemonkteam@gmail.com",
+    from, 
     to,
     subject,
     text,
