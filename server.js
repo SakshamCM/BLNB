@@ -101,13 +101,29 @@ app.get("/aboutUsAchievementsSection", async (request, response) => {
   }
 });
 
-app.put("/aboutUsAchievementsSection", async (request, response) => {
+app.post("/aboutUsAchievementsSection", async (request, response) => {
   try {
     let data = await aboutUsAchievementsSection.create(request.body);
     response.status(200).json(data);
   } catch (error) {
     console.log(error);
     response.status(500).json({ message: error });
+  }
+});
+
+app.put("/aboutUsAchievementsSection/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await aboutUsAchievementsSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
   }
 });
 
