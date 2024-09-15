@@ -101,7 +101,7 @@ app.get("/aboutUsAchievementsSection", async (request, response) => {
   }
 });
 
-app.post("/aboutUsAchievementsSection", async (request, response) => {
+app.put("/aboutUsAchievementsSection", async (request, response) => {
   try {
     let data = await aboutUsAchievementsSection.create(request.body);
     response.status(200).json(data);
