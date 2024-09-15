@@ -1,9 +1,9 @@
 require("dotenv").config();
-let express = require("express"); 
-let cors = require("cors"); 
+let express = require("express");
+let cors = require("cors");
 let nodemailer = require("nodemailer");
-let app = express(); 
-let mongoose = require("mongoose"); 
+let app = express();
+let mongoose = require("mongoose");
 let multer = require("multer");
 let aboutUsAchievementsSection = require("./models/about_us_page/aboutUsAchievementsSection");
 let aboutUsBestChoiceSection = require("./models/about_us_page/aboutUsBestChoice");
@@ -2322,26 +2322,42 @@ app.get("/adding-blog/:id", async (req, res) => {
   }
 });
 
-app.put("/adding-blog/:id", async (req, res) => {
-  try {
-    let { id } = req.params;
-    let updates = req.body;
+app.patch(
+  "/adding-blog/:id",
+  upload.fields([{ name: "image", maxCount: 1 }]),
+  async (req, res) => {
+    try {
+      let { id } = req.params;
+      let formData = req.body;
+      let files = req.files;
 
-    let data = await addingBlogSection.findByIdAndUpdate(id, updates, {
-      new: true,
-      runValidators: true,
-    });
+      // Update file paths if new files are uploaded
+      for (let key in files) {
+        if (files[key]) {
+          let imgBase64 = files[key][0].buffer.toString("base64");
+          formData[key] = `data:${files[key][0].mimetype};base64,${imgBase64}`;
+        }
+      }
 
-    if (!data) {
-      return res.status(404).json({ message: "Document not found" });
+      let updatedFeature = await addingBlogSection.findByIdAndUpdate(
+        id,
+        formData,
+        { new: true }
+      );
+
+      if (!updatedFeature) {
+        return res.status(404).json({ message: "Feature not found" });
+      }
+
+      res.json(updatedFeature);
+    } catch (error) {
+      console.error(error);
+      res
+        .status(500)
+        .json({ message: "Internal Server Error", error: error.message });
     }
-
-    res.status(200).json(data);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ message: error.message });
   }
-});
+);
 
 app.delete("/adding-blog/:id", async (req, res) => {
   try {
@@ -2667,27 +2683,40 @@ app.get("/news", async (request, response) => {
   }
 });
 
-app.put("/news/:id", async (req, res) => {
-  try {
-    let { id } = req.params;
-    let formData = req.body;
+app.patch(
+  "/news/:id",
+  upload.fields([{ name: "image", maxCount: 1 }]),
+  async (req, res) => {
+    try {
+      let { id } = req.params;
+      let formData = req.body;
+      let files = req.files;
 
-    let updatedFeature = await newsSection.findByIdAndUpdate(id, formData, {
-      new: true,
-    });
+      // Update file paths if new files are uploaded
+      for (let key in files) {
+        if (files[key]) {
+          let imgBase64 = files[key][0].buffer.toString("base64");
+          formData[key] = `data:${files[key][0].mimetype};base64,${imgBase64}`;
+        }
+      }
 
-    if (!updatedFeature) {
-      return res.status(404).json({ message: "Feature not found" });
+      let updatedFeature = await newsSection.findByIdAndUpdate(id, formData, {
+        new: true,
+      });
+
+      if (!updatedFeature) {
+        return res.status(404).json({ message: "Feature not found" });
+      }
+
+      res.json(updatedFeature);
+    } catch (error) {
+      console.error(error);
+      res
+        .status(500)
+        .json({ message: "Internal Server Error", error: error.message });
     }
-
-    res.json(updatedFeature);
-  } catch (error) {
-    console.error(error);
-    res
-      .status(500)
-      .json({ message: "Internal Server Error", error: error.message });
   }
-});
+);
 
 app.delete("/news/:id", async (req, res) => {
   try {
