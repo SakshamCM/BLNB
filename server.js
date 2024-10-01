@@ -73,6 +73,14 @@ const pflMetaSection = require("./models/about_us_page/pflMeta");
 const visitorMetaSection = require("./models/about_us_page/visitorMeta");
 const studyMetaSection = require("./models/about_us_page/studyMeta");
 const familyMetaSection = require("./models/about_us_page/familyMeta");
+const prRenewalSection = require("./models/about_us_page/innerPages/prRenewal");
+const citizenshipSection = require("./models/about_us_page/innerPages/citizenship");
+const reconsiderationSection = require("./models/about_us_page/innerPages/reconsideration");
+const additionalDocumentSection = require("./models/about_us_page/innerPages/additionalDocument");
+const replyPFlSection = require("./models/about_us_page/innerPages/replyPFL");
+const LmiaSection = require("./models/about_us_page/innerPages/Lmia");
+const openWorkPermitSection = require("./models/about_us_page/innerPages/openWorkPer");
+const workPermitSection = require("./models/about_us_page/innerPages/workPermit");
 
 let port = 4000;
 
@@ -114,9 +122,13 @@ app.post("/aboutUsAchievementsSection", async (request, response) => {
 app.put("/aboutUsAchievementsSection/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await aboutUsAchievementsSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await aboutUsAchievementsSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -2846,7 +2858,7 @@ app.post("/send-email", (req, res) => {
   const { from, to, subject, text } = req.body;
 
   const mailOptions = {
-    from, 
+    from,
     to,
     subject,
     text,
@@ -3628,13 +3640,337 @@ app.put("/family-meta/:id", async (req, res) => {
   }
 });
 
+app.get("/pr-renewal", async (request, response) => {
+  try {
+    let data = await prRenewalSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/pr-renewal", async (request, response) => {
+  try {
+    let data = await prRenewalSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/pr-renewal/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await prRenewalSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+/////
+
+app.get("/citizenship", async (request, response) => {
+  try {
+    let data = await citizenshipSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/citizenship", async (request, response) => {
+  try {
+    let data = await citizenshipSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/citizenship/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await citizenshipSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);  
+    res.status(500).json({ message: error.message }); 
+  }
+});
+
+
+///
+
+
+app.get("/reconsideration", async (request, response) => {
+  try {
+    let data = await reconsiderationSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/reconsideration", async (request, response) => {
+  try {
+    let data = await reconsiderationSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/reconsideration/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await reconsiderationSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);  
+    res.status(500).json({ message: error.message }); 
+  }
+});
+
+///
+
+
+
+app.get("/additionalDocument", async (request, response) => {
+  try {
+    let data = await additionalDocumentSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/additionalDocument", async (request, response) => {
+  try {
+    let data = await additionalDocumentSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/additionalDocument/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await additionalDocumentSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);  
+    res.status(500).json({ message: error.message }); 
+  }
+});
+
+////
+
+
+app.get("/replyPFl", async (request, response) => {
+  try {
+    let data = await replyPFlSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/replyPFl", async (request, response) => {
+  try {
+    let data = await replyPFlSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/replyPFl/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await replyPFlSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);  
+    res.status(500).json({ message: error.message }); 
+  }
+});
+
+
+///
+
+app.get("/Lmia", async (request, response) => {
+  try {
+    let data = await LmiaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/Lmia", async (request, response) => {
+  try {
+    let data = await LmiaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/Lmia/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await LmiaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);  
+    res.status(500).json({ message: error.message }); 
+  }
+});
+
+///
+
+
+
+
+app.get("/openWorkPer", async (request, response) => {
+  try {
+    let data = await openWorkPermitSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/openWorkPer", async (request, response) => {
+  try {
+    let data = await openWorkPermitSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/openWorkPer/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await openWorkPermitSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);  
+    res.status(500).json({ message: error.message }); 
+  }
+});
+
+
+///
+
+app.get("/ workPermit", async (request, response) => {
+  try {
+    let data = await workPermitSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/ workPermit", async (request, response) => {
+  try {
+    let data = await workPermitSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/ workPermit/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await workPermitSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);  
+    res.status(500).json({ message: error.message }); 
+  }
+});
+
+
+
 mongoose.set("strictQuery", false);
 mongoose
   .connect(process.env.MONGO_CLI)
-  .then(() => {
+  .then(async () => {
     app.listen(port, () => {
       console.log(`App running on ${port}`);
     });
+    //
+
+    // try {
+    //   const doc = await workPermitSection.create({});
+    //   console.log("Document created with default values: workPermitSection");
+    // } catch (err) {
+    //   console.error("Error creating document:", err);
+    // }
+
+    //
     console.log("Mongodb Connected");
   })
   .catch((error) => {
