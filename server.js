@@ -3961,16 +3961,16 @@ mongoose
     app.listen(port, () => {
       console.log(`App running on ${port}`);
     });
-    //
+    
 
     // try {
-    //   const doc = await workPermitSection.create({});
-    //   console.log("Document created with default values: workPermitSection");
+    //   const doc = await federalSkilledSection.create({});
+    //   console.log("Document created with default values: federal skilled calculator");
     // } catch (err) {
     //   console.error("Error creating document:", err);
     // }
 
-    //
+    
     console.log("Mongodb Connected");
   })
   .catch((error) => {
