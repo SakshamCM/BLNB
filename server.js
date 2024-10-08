@@ -84,6 +84,10 @@ const workPermitSection = require("./models/about_us_page/innerPages/workPermit"
 const agricultureStreamLmiaSection = require("./models/about_us_page/innerPages/agricultureStreamLmia");
 const globalTalentStreamLmiaSection = require("./models/about_us_page/innerPages/globalStreamLmia");
 const lowHighWageSection = require("./models/about_us_page/innerPages/lowWageLmia");
+const prPathwaysCaregiver = require("./models/about_us_page/innerPages/prPathwaysCaregiverLp");
+const pathwaysForCaregiverSection = require("./models/about_us_page/innerPages/pathwaysForCaregiver");
+const inHomeCaregiverSection = require("./models/about_us_page/innerPages/inHomeCaregiverProgramLp");
+const skilledWorkerStreamSection = require("./models/about_us_page/innerPages/skilledWorkerStream");
 
 let port = 4000;
 
@@ -3712,14 +3716,12 @@ app.put("/citizenship/:id", async (req, res) => {
     }
     res.status(200).json(updatedData);
   } catch (error) {
-    console.log(error);  
-    res.status(500).json({ message: error.message }); 
+    console.log(error);
+    res.status(500).json({ message: error.message });
   }
 });
 
-
 ///
-
 
 app.get("/reconsideration", async (request, response) => {
   try {
@@ -3744,22 +3746,24 @@ app.post("/reconsideration", async (request, response) => {
 app.put("/reconsideration/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await reconsiderationSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await reconsiderationSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
     res.status(200).json(updatedData);
   } catch (error) {
-    console.log(error);  
-    res.status(500).json({ message: error.message }); 
+    console.log(error);
+    res.status(500).json({ message: error.message });
   }
 });
 
 ///
-
-
 
 app.get("/additionalDocument", async (request, response) => {
   try {
@@ -3784,21 +3788,24 @@ app.post("/additionalDocument", async (request, response) => {
 app.put("/additionalDocument/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await additionalDocumentSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await additionalDocumentSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
     res.status(200).json(updatedData);
   } catch (error) {
-    console.log(error);  
-    res.status(500).json({ message: error.message }); 
+    console.log(error);
+    res.status(500).json({ message: error.message });
   }
 });
 
 ////
-
 
 app.get("/replyPFl", async (request, response) => {
   try {
@@ -3831,11 +3838,10 @@ app.put("/replyPFl/:id", async (req, res) => {
     }
     res.status(200).json(updatedData);
   } catch (error) {
-    console.log(error);  
-    res.status(500).json({ message: error.message }); 
+    console.log(error);
+    res.status(500).json({ message: error.message });
   }
 });
-
 
 ///
 
@@ -3870,15 +3876,12 @@ app.put("/Lmia/:id", async (req, res) => {
     }
     res.status(200).json(updatedData);
   } catch (error) {
-    console.log(error);  
-    res.status(500).json({ message: error.message }); 
+    console.log(error);
+    res.status(500).json({ message: error.message });
   }
 });
 
 ///
-
-
-
 
 app.get("/openWorkPer", async (request, response) => {
   try {
@@ -3903,19 +3906,22 @@ app.post("/openWorkPer", async (request, response) => {
 app.put("/openWorkPer/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await openWorkPermitSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await openWorkPermitSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
     res.status(200).json(updatedData);
   } catch (error) {
-    console.log(error);  
-    res.status(500).json({ message: error.message }); 
+    console.log(error);
+    res.status(500).json({ message: error.message });
   }
 });
-
 
 ///
 
@@ -3950,11 +3956,10 @@ app.put("/workPermit/:id", async (req, res) => {
     }
     res.status(200).json(updatedData);
   } catch (error) {
-    console.log(error);  
-    res.status(500).json({ message: error.message }); 
+    console.log(error);
+    res.status(500).json({ message: error.message });
   }
 });
-
 
 ///
 
@@ -3981,19 +3986,22 @@ app.post("/agricultureStreamLmia", async (request, response) => {
 app.put("/agricultureStreamLmia/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await agricultureStreamLmiaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await agricultureStreamLmiaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
     res.status(200).json(updatedData);
   } catch (error) {
-    console.log(error);  
-    res.status(500).json({ message: error.message }); 
+    console.log(error);
+    res.status(500).json({ message: error.message });
   }
 });
-
 
 ///
 
@@ -4020,16 +4028,20 @@ app.post("/globalStreamLmia", async (request, response) => {
 app.put("/globalStreamLmia/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await globalTalentStreamLmiaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await globalTalentStreamLmiaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
     res.status(200).json(updatedData);
   } catch (error) {
-    console.log(error);  
-    res.status(500).json({ message: error.message }); 
+    console.log(error);
+    res.status(500).json({ message: error.message });
   }
 });
 
@@ -4066,11 +4078,136 @@ app.put("/lowWageLmia/:id", async (req, res) => {
     }
     res.status(200).json(updatedData);
   } catch (error) {
-    console.log(error);  
-    res.status(500).json({ message: error.message }); 
+    console.log(error);
+    res.status(500).json({ message: error.message });
   }
 });
 
+//
+
+app.get("/pr-pathways-caregiver-lp", async (request, response) => {
+  try {
+    let data = await prPathwaysCaregiver.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/pr-pathways-caregiver-lp", async (request, response) => {
+  try {
+    let data = await prPathwaysCaregiver.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/pr-pathways-caregiver-lp/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await prPathwaysCaregiver.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+//
+
+app.get("/pathway-for-caregiver", async (request, response) => {
+  try {
+    let data = await pathwaysForCaregiverSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/pathway-for-caregiver", async (request, response) => {
+  try {
+    let data = await pathwaysForCaregiverSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/pathway-for-caregiver/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await pathwaysForCaregiverSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+//
+
+app.get("/skilled-worker-stream", async (request, response) => {
+  try {
+    let data = await skilledWorkerStreamSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/skilled-worker-stream", async (request, response) => {
+  try {
+    let data = await skilledWorkerStreamSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/skilled-worker-stream/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await skilledWorkerStreamSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
 
 mongoose.set("strictQuery", false);
 mongoose
@@ -4079,16 +4216,14 @@ mongoose
     app.listen(port, () => {
       console.log(`App running on ${port}`);
     });
-    
 
     // try {
-    //   const doc = await lowHighWageSection.create({});
-    //   console.log("Document created with default values: lowHighWageSection");
+    //   const doc = await skilledWorkerStreamSection.create({});
+    //   console.log("Document created with default values: skilledWorkerStreamSection");
     // } catch (err) {
     //   console.error("Error creating document:", err);
     // }
 
-    
     console.log("Mongodb Connected");
   })
   .catch((error) => {
