@@ -81,6 +81,9 @@ const replyPFlSection = require("./models/about_us_page/innerPages/replyPFL");
 const LmiaSection = require("./models/about_us_page/innerPages/Lmia");
 const openWorkPermitSection = require("./models/about_us_page/innerPages/openWorkPer");
 const workPermitSection = require("./models/about_us_page/innerPages/workPermit");
+const agricultureStreamLmiaSection = require("./models/about_us_page/innerPages/agricultureStreamLmia");
+const globalTalentStreamLmiaSection = require("./models/about_us_page/innerPages/globalStreamLmia");
+const lowHighWageSection = require("./models/about_us_page/innerPages/lowWageLmia");
 
 let port = 4000;
 
@@ -3916,7 +3919,7 @@ app.put("/openWorkPer/:id", async (req, res) => {
 
 ///
 
-app.get("/ workPermit", async (request, response) => {
+app.get("/workPermit", async (request, response) => {
   try {
     let data = await workPermitSection.find();
     response.status(200).json(data);
@@ -3926,7 +3929,7 @@ app.get("/ workPermit", async (request, response) => {
   }
 });
 
-app.post("/ workPermit", async (request, response) => {
+app.post("/workPermit", async (request, response) => {
   try {
     let data = await workPermitSection.create(request.body);
     response.status(200).json(data);
@@ -3936,7 +3939,7 @@ app.post("/ workPermit", async (request, response) => {
   }
 });
 
-app.put("/ workPermit/:id", async (req, res) => {
+app.put("/workPermit/:id", async (req, res) => {
   try {
     let { id } = req.params;
     let updatedData = await workPermitSection.findByIdAndUpdate(id, req.body, {
@@ -3953,6 +3956,121 @@ app.put("/ workPermit/:id", async (req, res) => {
 });
 
 
+///
+
+app.get("/agricultureStreamLmia", async (request, response) => {
+  try {
+    let data = await agricultureStreamLmiaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/agricultureStreamLmia", async (request, response) => {
+  try {
+    let data = await agricultureStreamLmiaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/agricultureStreamLmia/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await agricultureStreamLmiaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);  
+    res.status(500).json({ message: error.message }); 
+  }
+});
+
+
+///
+
+app.get("/globalStreamLmia", async (request, response) => {
+  try {
+    let data = await globalTalentStreamLmiaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/globalStreamLmia", async (request, response) => {
+  try {
+    let data = await globalTalentStreamLmiaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/globalStreamLmia/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await globalTalentStreamLmiaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);  
+    res.status(500).json({ message: error.message }); 
+  }
+});
+
+///
+
+app.get("/lowWageLmia", async (request, response) => {
+  try {
+    let data = await lowHighWageSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/lowWageLmia", async (request, response) => {
+  try {
+    let data = await lowHighWageSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/lowWageLmia/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await lowHighWageSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);  
+    res.status(500).json({ message: error.message }); 
+  }
+});
+
 
 mongoose.set("strictQuery", false);
 mongoose
@@ -3964,8 +4082,8 @@ mongoose
     
 
     // try {
-    //   const doc = await federalSkilledSection.create({});
-    //   console.log("Document created with default values: federal skilled calculator");
+    //   const doc = await lowHighWageSection.create({});
+    //   console.log("Document created with default values: lowHighWageSection");
     // } catch (err) {
     //   console.error("Error creating document:", err);
     // }

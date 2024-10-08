@@ -11,19 +11,19 @@ let LmiaSchema = mongoose.Schema(
     },
     WhatIsLmiaPara1 : {
         type: String,
-        default:"If you're looking to apply for an LMIA, it's because you are either a foreign worker who wants to apply for a job on a temporary work permit that is available in any Canadian province or an employer who wants to bring in skilled professionals or experienced workers to join their team in Canada.Canada relies on the Temporary Foreign Worker Program (TFWP) to bring in workers from other countries when there's a shortage of qualified workers in Canada for a particular job. When a Canadian employer wants to hire a foreign worker, they generally submit an application known as a Labour Market Impact Assessment (LMIA) to the Canadian Government Department - Employment and Social Development Canada (ESDC).An ESDC officer reviews the application to assess whether hiring the foreign worker would be beneficial for the Canadian job market. They ensure that qualified Canadians/PR haven't been overlooked for the position and that the foreign worker will receive appropriate pay and benefits according to federal and provincial regulations.",
+        default:"If you're looking to apply for an LMIA, it's because you are either a foreign worker who wants to apply for a job on a temporary work permit that is available in any Canadian province or an employer who wants to bring in skilled professionals or experienced workers to join their team in Canada.",
       },
       WhatIsLmiaPara2 : {
         type: String,
-        default:"An ESDC officer reviews the application to assess whether hiring the foreign worker would be beneficial for the Canadian job market. They ensure that qualified Canadians/PR haven't been overlooked for the position and that the foreign worker will receive appropriate pay and benefits according to federal and provincial regulations.",
+        default:"Canada relies on the Temporary Foreign Worker Program (TFWP) to bring in workers from other countries when there's a shortage of qualified workers in Canada for a particular job. When a Canadian employer wants to hire a foreign worker, they generally submit an application known as a Labour Market Impact Assessment (LMIA) to the Canadian Government Department - Employment and Social Development Canada (ESDC).",
       },
       WhatIsLmiaPara3 : {
         type: String,
-        default:"If the LMIA is positive or neutral, it means there's no Canadian available for the job, and hiring a foreign worker won't hurt the Canadian job market. However, if it's negative, it means that the employer has failed to demonstrate that they meet at least one of the requirements mentioned on the ESDC website.",
+        default:"An ESDC officer after reviewing the application assesses whether hiring the foreign worker would be beneficial for the Canadian job market. They ensure that qualified Canadians/PR hasn't been overlooked for the position and that the foreign worker will receive appropriate pay and benefits according to federal and provincial regulations.",
       },
       WhatIsLmiaPara4 : {
         type: String,
-        default:"At Brightlight Immigration, we do not provide recruitment services. As your official legal consultants, we can represent your case to ESDC and get you the desired favorable response.",
+        default:"If the LMIA is positive or neutral, it means there's no Canadian available for the job, and hiring a foreign worker won't hurt the Canadian job market. However, if it's negative, it means that the employer has failed to demonstrate that he does not meet at least one of the requirements mentioned on the ESDC website. At Brightlight Immigration, we do not provide recruitment services. As your official legal consultants, we can represent your case to ESDC and get you the desired favorable response.",
       },
       BenifitsHeading : {
       type: String,
@@ -31,7 +31,7 @@ let LmiaSchema = mongoose.Schema(
     },
     BenefitsCanadianEmployersSubHeading : {
         type: String,
-        default:"Benefits of the LMIA Program",
+        default:"Benefits for Canadian Employers",
       },
 
       b11 :{
@@ -48,7 +48,7 @@ let LmiaSchema = mongoose.Schema(
     },
       BenefitsForeignWorkersSubHeading : {
         type: String,
-        default:"Benefits of the LMIA Program",
+        default:"Benefits for Foreign Workers",
       },
     b21 :{
         type:String,

@@ -5,10 +5,6 @@ let reconsiderationSchema = mongoose.Schema(
       type: String,
       default: "Reconsideration for Refusal Decision",
     },
-    DonotWorryHeading : {
-      type: String,
-      default:"Don't Worry, There's Still Hope!",
-    },
     DonotWorryPara1 : {
         type: String,
         default:"Are you a Canadian immigrant who has recently received a rejection for your visa application? If so, you're not alone. Many people experience this setback on their journey to becoming a Canadian resident.",
@@ -64,6 +60,26 @@ let reconsiderationSchema = mongoose.Schema(
     er3 :{
         type:String,
         default:"You must have new info or reasons that weren't considered before. This new info should relate to why your application was rejected and be enough to change the decision.",
+    },
+   HowToApplyHeading: {
+      type: String,
+      default: "How to Apply for Reconsideration",
+    },
+    HowToApplySubHeading: {
+      type: String,
+      default: "Meet the eligibility criteria? Let's see how you can request a reconsideration.",
+    },
+    HowApplyL1: {
+      type: String,
+      default: "You must submit the request within 30 days of receiving the refusal letter. The request should be well-written and clearly explain why you believe the decision should be overturned.",
+    },
+    HowApplyL2: {
+      type: String,
+      default: "Wait for IRCC to review your request and provide any additional information or documentation that the IRCC officer may request.",
+    },
+    HowApplyL3: {
+      type: String,
+      default: "IRCC will decide on your request within 90 days of receiving it. If the decision is in your favor, you will be granted the visa you requested. If the decision is not in your favor, you will have the option to appeal the decision.",
     },
 
     RefusalHeading: {

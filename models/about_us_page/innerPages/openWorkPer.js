@@ -5,10 +5,7 @@ let openWorkPermitSchema = mongoose.Schema(
       type: String,
       default: "Open Work Permit",
     },
-  WhatIsHeading : {
-      type: String,
-      default:"What is an Open Work Permit?",
-    },
+
     WhatIsPara : {
         type: String,
         default:"A Canadian Open Work Permit is a temporary document that allows foreign nationals to work in Canada without being tied to a specific employer. This type of permit offers flexibility and opens up a wide range of job opportunities for eligible individuals.",
