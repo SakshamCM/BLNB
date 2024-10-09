@@ -97,6 +97,20 @@ const pgwpSection = require("./models/about_us_page/innerPages/pgwp");
 const familyReunificationSection = require("./models/about_us_page/innerPages/familyReunification");
 const adoptionSection = require("./models/about_us_page/innerPages/adoption");
 const DependentChildrenSection = require("./models/about_us_page/innerPages/dependentChild");
+const humanitarianComSection = require("./models/about_us_page/innerPages/humanitarianCom");
+const lonelyCanadianSection = require("./models/about_us_page/innerPages/lonelyCanadian");
+const parentsGrandParSection = require("./models/about_us_page/innerPages/parentsGrandPar");
+const studentVisaSection = require("./models/about_us_page/innerPages/studentVisa");
+const orphanSection = require("./models/about_us_page/innerPages/orphan");
+const insideCanadaSection = require("./models/about_us_page/innerPages/insideCanada");
+const changeCollegeProgSection = require("./models/about_us_page/innerPages/changeCollegeProg");
+const visitorToStudentSection = require("./models/about_us_page/innerPages/visitorToStudent");
+const outsideCanadaSection = require("./models/about_us_page/innerPages/outsideCanada");
+const nonSdsSection = require("./models/about_us_page/innerPages/nonSds");
+const sdsSection = require("./models/about_us_page/innerPages/sds");
+const studyPermitMinorsSection = require("./models/about_us_page/innerPages/studyPermitMinors");
+const extensionSection = require("./models/about_us_page/innerPages/extension");
+const flagpolingSection = require("./models/about_us_page/innerPages/flagpoling");
 
 let port = 4000;
 
@@ -4585,7 +4599,7 @@ app.put("/dependentChildren/:id", async (req, res) => {
 });
 
 
-
+///
 
 
 app.get("/priorities-program-page", async (request, response) => {
@@ -4628,6 +4642,619 @@ app.put("/priorities-program-page/:id", async (req, res) => {
   }
 });
 
+//
+app.get("/humanitarian-compassionate", async (request, response) => {
+  try {
+    let data = await humanitarianComSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/humanitarian-compassionate", async (request, response) => {
+  try {
+    let data = await humanitarianComSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/humanitarian-compassionate/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await humanitarianComSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+//
+
+app.get("/lonelyCanadian", async (request, response) => {
+  try {
+    let data = await lonelyCanadianSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/lonelyCanadian", async (request, response) => {
+  try {
+    let data = await lonelyCanadianSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/lonelyCanadian/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await lonelyCanadianSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+//
+
+
+app.get("/ParentsGrandparents", async (request, response) => {
+  try {
+    let data = await parentsGrandParSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/ParentsGrandparents", async (request, response) => {
+  try {
+    let data = await parentsGrandParSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/ParentsGrandparents/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await parentsGrandParSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+//
+
+
+app.get("/studentVisa", async (request, response) => {
+  try {
+    let data = await studentVisaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/studentVisa", async (request, response) => {
+  try {
+    let data = await studentVisaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/studentVisa/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await studentVisaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+//
+
+
+app.get("/orphan", async (request, response) => {
+  try {
+    let data = await orphanSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/orphan", async (request, response) => {
+  try {
+    let data = await orphanSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/orphan/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await orphanSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+
+
+app.get("/insideCanada", async (request, response) => {
+  try {
+    let data = await insideCanadaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/insideCanada", async (request, response) => {
+  try {
+    let data = await insideCanadaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/insideCanada/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await insideCanadaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+
+
+//
+
+
+app.get("/changeCollegeProgram", async (request, response) => {
+  try {
+    let data = await changeCollegeProgSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/changeCollegeProgram", async (request, response) => {
+  try {
+    let data = await changeCollegeProgSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/changeCollegeProgram/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await changeCollegeProgSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+
+//
+
+
+app.get("/visitorToStudent", async (request, response) => {
+  try {
+    let data = await visitorToStudentSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/visitorToStudent", async (request, response) => {
+  try {
+    let data = await visitorToStudentSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/visitorToStudent/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await visitorToStudentSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+//
+
+
+app.get("/outsideCanada", async (request, response) => {
+  try {
+    let data = await outsideCanadaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/outsideCanada", async (request, response) => {
+  try {
+    let data = await outsideCanadaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/outsideCanada/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await outsideCanadaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+
+//
+
+
+app.get("/nonSds", async (request, response) => {
+  try {
+    let data = await nonSdsSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/nonSds", async (request, response) => {
+  try {
+    let data = await nonSdsSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/nonSds/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await nonSdsSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+//
+
+
+app.get("/sds", async (request, response) => {
+  try {
+    let data = await sdsSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/sds", async (request, response) => {
+  try {
+    let data = await sdsSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/sds/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await sdsSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+///
+app.get("/studyPermitMinors", async (request, response) => {
+  try {
+    let data = await studyPermitMinorsSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/studyPermitMinors", async (request, response) => {
+  try {
+    let data = await studyPermitMinorsSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/studyPermitMinors/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await studyPermitMinorsSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+
+///
+app.get("/extensionsDraft", async (request, response) => {
+  try {
+    let data = await extensionSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/extensionsDraft", async (request, response) => {
+  try {
+    let data = await extensionSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/extensionsDraft/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await extensionSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+
+
+
+
+
+
+
+
+///
+app.get("/flagpoling", async (request, response) => {
+  try {
+    let data = await flagpolingSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/flagpoling", async (request, response) => {
+  try {
+    let data = await flagpolingSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/flagpoling/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await flagpolingSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+
+
+
+
+
+
 mongoose.set("strictQuery", false);
 mongoose
   .connect(process.env.MONGO_CLI)
@@ -4637,8 +5264,8 @@ mongoose
     });
 
     // try {
-    //   const doc = await DependentChildrenSection.create({});
-    //   console.log("Document created with default values: DependentChildrenSection");
+    //   const doc = await flagpolingSection.create({});
+    //   console.log("Document created with default values: flagpolingSection");
     // } catch (err) {
     //   console.error("Error creating document:", err);
     // }
