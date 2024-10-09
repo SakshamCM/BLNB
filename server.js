@@ -89,6 +89,12 @@ const pathwaysForCaregiverSection = require("./models/about_us_page/innerPages/p
 const inHomeCaregiverSection = require("./models/about_us_page/innerPages/inHomeCaregiverProgramLp");
 const skilledWorkerStreamSection = require("./models/about_us_page/innerPages/skilledWorkerStream");
 
+const bridgingOpenSection = require("./models/about_us_page/innerPages/bridgingOpenWork");
+const francophoneMobilitySection = require("./models/about_us_page/innerPages/francophoneMobility");
+const openWorkVulnerableSection = require("./models/about_us_page/innerPages/openWorkVulnerable");
+const openWorkDependentChildSection = require("./models/about_us_page/innerPages/openWorkDependentChild");
+const pgwpSection = require("./models/about_us_page/innerPages/pgwp");
+
 let port = 4000;
 
 app.use(cors());
@@ -4005,6 +4011,48 @@ app.put("/agricultureStreamLmia/:id", async (req, res) => {
 
 ///
 
+app.get("/in-home-caregiver", async (request, response) => {
+  try {
+    let data = await inHomeCaregiverSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/in-home-caregiver", async (request, response) => {
+  try {
+    let data = await inHomeCaregiverSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/in-home-caregiver/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await inHomeCaregiverSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+///
+
 app.get("/globalStreamLmia", async (request, response) => {
   try {
     let data = await globalTalentStreamLmiaSection.find();
@@ -4206,6 +4254,209 @@ app.put("/skilled-worker-stream/:id", async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: error.message });
+  }
+});
+
+///
+
+app.get("/bridgingOpenWork", async (request, response) => {
+  try {
+    let data = await bridgingOpenSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/bridgingOpenWork", async (request, response) => {
+  try {
+    let data = await bridgingOpenSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/bridgingOpenWork/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await bridgingOpenSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);  
+    res.status(500).json({ message: error.message }); 
+  }
+});
+
+
+
+
+////
+
+app.get("/francoMob", async (request, response) => {
+  try {
+    let data = await francophoneMobilitySection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/francoMob", async (request, response) => {
+  try {
+    let data = await francophoneMobilitySection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/francoMob/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await francophoneMobilitySection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);  
+    res.status(500).json({ message: error.message }); 
+  }
+});
+
+
+
+
+
+////
+
+app.get("/openWorkVulnerable", async (request, response) => {
+  try {
+    let data = await openWorkVulnerableSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/openWorkVulnerable", async (request, response) => {
+  try {
+    let data = await openWorkVulnerableSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/openWorkVulnerable/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await openWorkVulnerableSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);  
+    res.status(500).json({ message: error.message }); 
+  }
+});
+
+
+///
+
+
+
+app.get("/openWorkDependentChild", async (request, response) => {
+  try {
+    let data = await openWorkDependentChildSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/openWorkDependentChild", async (request, response) => {
+  try {
+    let data = await openWorkDependentChildSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/openWorkDependentChild/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await openWorkDependentChildSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);  
+    res.status(500).json({ message: error.message }); 
+  }
+});
+
+
+///
+
+
+
+app.get("/pgwp", async (request, response) => {
+  try {
+    let data = await pgwpSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/pgwp", async (request, response) => {
+  try {
+    let data = await pgwpSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/pgwp/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await pgwpSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);  
+    res.status(500).json({ message: error.message }); 
   }
 });
 
