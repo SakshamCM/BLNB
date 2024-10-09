@@ -94,6 +94,9 @@ const francophoneMobilitySection = require("./models/about_us_page/innerPages/fr
 const openWorkVulnerableSection = require("./models/about_us_page/innerPages/openWorkVulnerable");
 const openWorkDependentChildSection = require("./models/about_us_page/innerPages/openWorkDependentChild");
 const pgwpSection = require("./models/about_us_page/innerPages/pgwp");
+const familyReunificationSection = require("./models/about_us_page/innerPages/familyReunification");
+const adoptionSection = require("./models/about_us_page/innerPages/adoption");
+const DependentChildrenSection = require("./models/about_us_page/innerPages/dependentChild");
 
 let port = 4000;
 
@@ -4460,6 +4463,171 @@ app.put("/pgwp/:id", async (req, res) => {
   }
 });
 
+
+///
+
+
+
+app.get("/familyReunification", async (request, response) => {
+  try {
+    let data = await familyReunificationSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/familyReunification", async (request, response) => {
+  try {
+    let data = await familyReunificationSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/familyReunification/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await familyReunificationSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);  
+    res.status(500).json({ message: error.message }); 
+  }
+});
+
+
+///
+
+///
+
+app.get("/adoption", async (request, response) => {
+  try {
+    let data = await adoptionSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/adoption", async (request, response) => {
+  try {
+    let data = await adoptionSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/adoption/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await adoptionSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);  
+    res.status(500).json({ message: error.message }); 
+  }
+});
+
+////
+
+
+app.get("/dependentChildren", async (request, response) => {
+  try {
+    let data = await DependentChildrenSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/dependentChildren", async (request, response) => {
+  try {
+    let data = await DependentChildrenSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/dependentChildren/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await DependentChildrenSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);  
+    res.status(500).json({ message: error.message }); 
+  }
+});
+
+
+
+
+
+app.get("/priorities-program-page", async (request, response) => {
+  try {
+    let data = await prioritiesProgramSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/priorities-program-page", async (request, response) => {
+  try {
+    let data = await prioritiesProgramSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/priorities-program-page/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await prioritiesProgramSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
 mongoose.set("strictQuery", false);
 mongoose
   .connect(process.env.MONGO_CLI)
@@ -4469,8 +4637,8 @@ mongoose
     });
 
     // try {
-    //   const doc = await skilledWorkerStreamSection.create({});
-    //   console.log("Document created with default values: skilledWorkerStreamSection");
+    //   const doc = await DependentChildrenSection.create({});
+    //   console.log("Document created with default values: DependentChildrenSection");
     // } catch (err) {
     //   console.error("Error creating document:", err);
     // }

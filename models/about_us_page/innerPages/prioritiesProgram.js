@@ -238,19 +238,715 @@ let prioritiesProgSchema = mongoose.Schema(
       default: "NOC Code",
     },
 
+    t1r1c1: {
+      type: String,
+      default: "Early Childhood Educators and Assistants",
+    },
+    t1r1c2: {
+      type: String,
+      default: "42202",
+    },
+
     table2Heading: {
       type: String,
       default:
         "For a comprehensive list of eligible National Occupational Classification (NOC) codes, please refer to the NOC list below:",
     },
 
-    t1r1t1: {
+    t2h1: {
       type: String,
-      default: "Early Childhood Educators and Assistants",
+      default: "Occupation",
     },
-    t1r1t1: {
+    t2h2: {
       type: String,
-      default: "42202",
+      default: "NOC Code",
+    },
+
+    t2r1c1: {
+      type: String,
+      default: "Landscape and Horticulture Technicians and Specialists",
+    },
+    t2r1c2: {
+      type: String,
+      default: "22114",
+    },
+
+    t2r2c1: {
+      type: String,
+      default: "Sheet Metal Workers",
+    },
+    t2r2c2: {
+      type: String,
+      default: "72102",
+    },
+
+    t2r3c1: {
+      type: String,
+      default: "Boilermakers",
+    },
+    t2r3c2: {
+      type: String,
+      default: "72103",
+    },
+
+    t2r4c1: {
+      type: String,
+      default: "Structural Metal and Platework Fabricators and Fitters",
+    },
+    t2r4c2: {
+      type: String,
+      default: "72104",
+    },
+
+    t2r5c1: {
+      type: String,
+      default: "Ironworkers",
+    },
+    t2r5c2: {
+      type: String,
+      default: "72105",
+    },
+
+    t2r6c1: {
+      type: String,
+      default: "Welders and Related Machine Operators",
+    },
+    t2r6c2: {
+      type: String,
+      default: "72106",
+    },
+
+    t2r7c1: {
+      type: String,
+      default: "Electricians (Except Industrial and Power System)",
+    },
+    t2r7c2: {
+      type: String,
+      default: "72200",
+    },
+
+    t2r8c1: {
+      type: String,
+      default: "Industrial Electricians",
+    },
+    t2r8c2: {
+      type: String,
+      default: "72201",
+    },
+
+    t2r9c1: {
+      type: String,
+      default: "Plumbers",
+    },
+    t2r9c2: {
+      type: String,
+      default: "72300",
+    },
+
+    t2r10c1: {
+      type: String,
+      default: "Steamfitters, Pipefitters and Sprinkler System Installers",
+    },
+    t2r10c2: {
+      type: String,
+      default: "72301",
+    },
+
+    t2r11c1: {
+      type: String,
+      default: "Gas Fitters",
+    },
+    t2r11c2: {
+      type: String,
+      default: "72302",
+    },
+
+    t2r12c1: {
+      type: String,
+      default: "Carpenters",
+    },
+    t2r12c2: {
+      type: String,
+      default: "72310",
+    },
+
+    t2r13c1: {
+      type: String,
+      default: "Cabinetmakers",
+    },
+    t2r13c2: {
+      type: String,
+      default: "72311",
+    },
+
+    t2r14c1: {
+      type: String,
+      default: "Bricklayers",
+    },
+    t2r14c2: {
+      type: String,
+      default: "72320",
+    },
+
+    t2r15c1: {
+      type: String,
+      default: "Construction Millwrights and Industrial Mechanics",
+    },
+    t2r15c2: {
+      type: String,
+      default: "72400",
+    },
+
+    t2r16c1: {
+      type: String,
+      default: "Heavy-Duty Equipment Mechanics",
+    },
+    t2r16c2: {
+      type: String,
+      default: "72401",
+    },
+
+    t2r17c1: {
+      type: String,
+      default: "Heating, Refrigeration and Air Conditioning Mechanics",
+    },
+    t2r17c2: {
+      type: String,
+      default: "72402",
+    },
+
+    t2r18c1: {
+      type: String,
+      default: "Crane Operators",
+    },
+    t2r18c2: {
+      type: String,
+      default: "72500",
+    },
+
+    t2r19c1: {
+      type: String,
+      default: "Concrete Finishers",
+    },
+    t2r19c2: {
+      type: String,
+      default: "73100",
+    },
+
+    t2r20c1: {
+      type: String,
+      default: "Tilesetters",
+    },
+    t2r20c2: {
+      type: String,
+      default: "73101",
+    },
+
+    t2r21c1: {
+      type: String,
+      default: "Plasterers, Drywall Installers and Finishers and Lathers",
+    },
+    t2r21c2: {
+      type: String,
+      default: "73102",
+    },
+
+    t2r22c1: {
+      type: String,
+      default: "Roofers and Shinglers",
+    },
+    t2r22c2: {
+      type: String,
+      default: "73110",
+    },
+
+    t2r23c1: {
+      type: String,
+      default: "Glaziers",
+    },
+    t2r23c2: {
+      type: String,
+      default: "73111",
+    },
+
+    t2r24c1: {
+      type: String,
+      default: "Painters and Decorators (Except Interior Decorators)",
+    },
+    t2r24c2: {
+      type: String,
+      default: "73112",
+    },
+
+    t2r25c1: {
+      type: String,
+      default: "Floor Covering Installers",
+    },
+    t2r25c2: {
+      type: String,
+      default: "73113",
+    },
+
+    table3Heading: {
+      type: String,
+      default:
+        "For a comprehensive list of eligible National Occupational Classification (NOC) codes, please refer to the NOC list below:",
+    },
+
+    t3h1: {
+      type: String,
+      default: "Occupation",
+    },
+    t3h2: {
+      type: String,
+      default: "NOC Code",
+    },
+
+    t3r1c1: {
+      type: String,
+      default: "Managers in Health Care",
+    },
+    t3r1c2: {
+      type: String,
+      default: "30010",
+    },
+
+    t3r2c1: {
+      type: String,
+      default: "Specialists in Clinical and Laboratory Medicine",
+    },
+    t3r2c2: {
+      type: String,
+      default: "31100",
+    },
+
+    t3r3c1: {
+      type: String,
+      default: "Specialists in Surgery",
+    },
+    t3r3c2: {
+      type: String,
+      default: "31101",
+    },
+
+    t3r4c1: {
+      type: String,
+      default: "General Practitioners and Family Physicians",
+    },
+    t3r4c2: {
+      type: String,
+      default: "31102",
+    },
+
+    t3r5c1: {
+      type: String,
+      default: "Dentists",
+    },
+    t3r5c2: {
+      type: String,
+      default: "31110",
+    },
+
+    t3r6c1: {
+      type: String,
+      default: "Audiologists and Speech-Language Pathologists",
+    },
+    t3r6c2: {
+      type: String,
+      default: "31112",
+    },
+
+    t3r7c1: {
+      type: String,
+      default: "Pharmacists",
+    },
+    t3r7c2: {
+      type: String,
+      default: "31120",
+    },
+
+    t3r8c1: {
+      type: String,
+      default: "Dietitians and Nutritionists",
+    },
+    t3r8c2: {
+      type: String,
+      default: "31121",
+    },
+
+    t3r9c1: {
+      type: String,
+      default: "Psychologists",
+    },
+    t3r9c2: {
+      type: String,
+      default: "31200",
+    },
+
+    t3r10c1: {
+      type: String,
+      default: "Chiropractors",
+    },
+    t3r10c2: {
+      type: String,
+      default: "31201",
+    },
+
+    t3r11c1: {
+      type: String,
+      default: "Physiotherapists",
+    },
+    t3r11c2: {
+      type: String,
+      default: "31202",
+    },
+
+    t3r12c1: {
+      type: String,
+      default: "Occupational Therapists",
+    },
+    t3r12c2: {
+      type: String,
+      default: "31203",
+    },
+
+    t3r13c1: {
+      type: String,
+      default:
+        "Kinesiologists and Other Professional Occupations in Therapy and Assessment",
+    },
+    t3r13c2: {
+      type: String,
+      default: "31204",
+    },
+
+    t3r14c1: {
+      type: String,
+      default:
+        "Other Professional Occupations in Health Diagnosing and Treating",
+    },
+    t3r14c2: {
+      type: String,
+      default: "31209",
+    },
+
+    t3r15c1: {
+      type: String,
+      default: "Nursing Coordinators and Supervisors",
+    },
+    t3r15c2: {
+      type: String,
+      default: "31300",
+    },
+
+    t3r16c1: {
+      type: String,
+      default: "Registered Nurses and Registered Psychiatric Nurses",
+    },
+    t3r16c2: {
+      type: String,
+      default: "31301",
+    },
+
+    t3r17c1: {
+      type: String,
+      default: "Nurse Practitioners",
+    },
+    t3r17c2: {
+      type: String,
+      default: "31302",
+    },
+
+    t3r18c1: {
+      type: String,
+      default: "Physician Assistants, Midwives and Allied Health Professionals",
+    },
+    t3r18c2: {
+      type: String,
+      default: "31303",
+    },
+
+    t3r19c1: {
+      type: String,
+      default: "Licensed Practical Nurses",
+    },
+    t3r19c2: {
+      type: String,
+      default: "32101",
+    },
+
+    t3r20c1: {
+      type: String,
+      default: "Paramedical Occupations",
+    },
+    t3r20c2: {
+      type: String,
+      default: "32102",
+    },
+
+    t3r21c1: {
+      type: String,
+      default:
+        "Respiratory Therapists, Clinical Perfusionists and Cardiopulmonary Technologists",
+    },
+    t3r21c2: {
+      type: String,
+      default: "32103",
+    },
+
+    t3r22c1: {
+      type: String,
+      default: "Medical Radiation Technologists",
+    },
+    t3r22c2: {
+      type: String,
+      default: "32104",
+    },
+
+    t3r23c1: {
+      type: String,
+      default: "Medical Laboratory Technologists",
+    },
+    t3r23c2: {
+      type: String,
+      default: "32105",
+    },
+
+    t3r24c1: {
+      type: String,
+      default: "Medical Laboratory Technicians",
+    },
+    t3r24c2: {
+      type: String,
+      default: "32106",
+    },
+
+    t3r25c1: {
+      type: String,
+      default: "Opticians",
+    },
+    t3r25c2: {
+      type: String,
+      default: "32110",
+    },
+
+    t3r26c1: {
+      type: String,
+      default: "Dental Hygienists and Dental Therapists",
+    },
+    t3r26c2: {
+      type: String,
+      default: "32111",
+    },
+
+    t3r27c1: {
+      type: String,
+      default: "Dental Assistants",
+    },
+    t3r27c2: {
+      type: String,
+      default: "32112",
+    },
+
+    t3r28c1: {
+      type: String,
+      default: "Other Technical Occupations in Health Care",
+    },
+    t3r28c2: {
+      type: String,
+      default: "32119",
+    },
+
+    t3r29c1: {
+      type: String,
+      default: "Veterinarians",
+    },
+    t3r29c2: {
+      type: String,
+      default: "31103",
+    },
+
+    t3r30c1: {
+      type: String,
+      default: "Veterinary Technologists and Technicians",
+    },
+    t3r30c2: {
+      type: String,
+      default: "32120",
+    },
+
+    table4Heading: {
+      type: String,
+      default:
+        "For a comprehensive list of eligible National Occupational Classification (NOC) codes, please refer to the NOC list below:",
+    },
+
+    t4h1: {
+      type: String,
+      default: "Occupation",
+    },
+    t4h2: {
+      type: String,
+      default: "NOC Code",
+    },
+
+    t4r1c1: {
+      type: String,
+      default: "Telecommunication Carriers Managers",
+    },
+    t4r1c2: {
+      type: String,
+      default: "10030",
+    },
+
+    t4r2c1: {
+      type: String,
+      default: "Information Systems Managers",
+    },
+    t4r2c2: {
+      type: String,
+      default: "10031",
+    },
+
+    t4r3c1: {
+      type: String,
+      default: "Computer and Information Systems Managers",
+    },
+    t4r3c2: {
+      type: String,
+      default: "10032",
+    },
+
+    t4r4c1: {
+      type: String,
+      default: "Software Engineers and Designers",
+    },
+    t4r4c2: {
+      type: String,
+      default: "21701",
+    },
+
+    t4r5c1: {
+      type: String,
+      default: "Computer Programmers and Interactive Media Developers",
+    },
+    t4r5c2: {
+      type: String,
+      default: "21702",
+    },
+
+    t4r6c1: {
+      type: String,
+      default: "Web Designers and Developers",
+    },
+    t4r6c2: {
+      type: String,
+      default: "21703",
+    },
+
+    t4r7c1: {
+      type: String,
+      default: "Database Analysts and Data Administrators",
+    },
+    t4r7c2: {
+      type: String,
+      default: "21704",
+    },
+
+    t4r8c1: {
+      type: String,
+      default: "Network Specialists",
+    },
+    t4r8c2: {
+      type: String,
+      default: "21705",
+    },
+
+    t4r9c1: {
+      type: String,
+      default: "Computer Network Technicians",
+    },
+    t4r9c2: {
+      type: String,
+      default: "22801",
+    },
+
+    t4r10c1: {
+      type: String,
+      default: "Network Operators",
+    },
+    t4r10c2: {
+      type: String,
+      default: "22802",
+    },
+
+    t4r11c1: {
+      type: String,
+      default: "Computer Support Workers",
+    },
+    t4r11c2: {
+      type: String,
+      default: "22803",
+    },
+
+    t4r12c1: {
+      type: String,
+      default: "Security Analysts",
+    },
+    t4r12c2: {
+      type: String,
+      default: "22804",
+    },
+
+    t4r13c1: {
+      type: String,
+      default: "Systems Analysts",
+    },
+    t4r13c2: {
+      type: String,
+      default: "22805",
+    },
+
+    t4r14c1: {
+      type: String,
+      default: "Other Information Technology Occupations",
+    },
+    t4r14c2: {
+      type: String,
+      default: "22809",
+    },
+
+    table5Heading: {
+      type: String,
+      default:
+        "For a comprehensive list of eligible National Occupational Classification (NOC) codes, please refer to the NOC list below:",
+    },
+
+    t5h1: {
+      type: String,
+      default: "Occupation",
+    },
+    t5h2: {
+      type: String,
+      default: "NOC Code",
+    },
+
+    t5r1c1: {
+      type: String,
+      default: "Veterinarians",
+    },
+    t5r1c2: {
+      type: String,
+      default: "31103",
+    },
+
+    t5r2c1: {
+      type: String,
+      default: "Veterinary Technologists and Technicians",
+    },
+    t5r2c2: {
+      type: String,
+      default: "32120",
     },
 
     StillNotHeading: {
