@@ -132,6 +132,8 @@ const entryLevelSemiSkilledSection = require("./models/about_us_page/innerPages/
 const internationalPostGraduateProgramSection = require("./models/about_us_page/innerPages/internationalPostGraduateProgram");
 const internationalGraduateProgramSection = require("./models/about_us_page/innerPages/internationalGraduateProgram");
 const bcPNPPageSection = require("./models/about_us_page/innerPages/bcPNP");
+const healthcareTargatedDrawSection = require("./models/about_us_page/innerPages/healthcareTargatedDraw");
+const PNPPageSection = require("./models/about_us_page/innerPages/pNP");
 
 let port = 4000;
 
@@ -6027,6 +6029,7 @@ app.put("/international-graduate-program-page/:id", async (req, res) => {
   }
 });
 
+//
 app.get("/bc-pnp-page", async (request, response) => {
   try {
     let data = await bcPNPPageSection.find();
@@ -6062,9 +6065,81 @@ app.put("/bc-pnp-page/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
+//
 
+app.get("/healthcareTargatedDraw", async (request, response) => {
+  try {
+    let data = await healthcareTargatedDrawSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
 
+app.post("/healthcareTargatedDraw", async (request, response) => {
+  try {
+    let data = await healthcareTargatedDrawSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
 
+app.put("/healthcareTargatedDraw/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await healthcareTargatedDrawSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+///
+
+app.get("/pnp-page", async (request, response) => {
+  try {
+    let data = await PNPPageSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/pnp-page", async (request, response) => {
+  try {
+    let data = await PNPPageSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/pnp-page/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await PNPPageSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
 
 
 
@@ -6081,8 +6156,8 @@ mongoose
     });
 
     // try {
-    //   const doc = await frenchTargetedDrawSection.create({});
-    //   console.log("Document created with default values: frenchTargetedDrawSection");
+    //   const doc = await healthcareTargatedDrawSection.create({});
+    //   console.log("Document created with default values: healthcareTargatedDrawSection");
     // } catch (err) {
     //   console.error("Error creating document:", err);
     // }
