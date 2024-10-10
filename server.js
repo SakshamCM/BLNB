@@ -115,6 +115,23 @@ const restorationStatusDraftSection = require("./models/about_us_page/innerPages
 const spousalOpenWokPerSection = require("./models/about_us_page/innerPages/spousalOpenWokPer");
 const comLawPartPermanSection = require("./models/about_us_page/innerPages/comLawPartPerman");
 const comLawPartTempSection = require("./models/about_us_page/innerPages/comLawPartTemp");
+const superVisaSection = require("./models/about_us_page/innerPages/superVisa");
+const prioritiesProgramSection = require("./models/about_us_page/innerPages/prioritiesProgram");
+const temporaryResidentPermSection = require("./models/about_us_page/innerPages/temporaryResidentPerm");
+const temporaryResidencySection = require("./models/about_us_page/innerPages/temporaryResidency");
+const visitorVisaSection = require("./models/about_us_page/innerPages/visitorVisa");
+const buisinessVisitorVisaSection = require("./models/about_us_page/innerPages/buisinessVisitorVisa");
+const dualintentVisaSection = require("./models/about_us_page/innerPages/dualintentVisa");
+const canadianExperienceClassSection = require("./models/about_us_page/innerPages/canadianExperienceClass");
+const federalSkillTradesProgSection = require("./models/about_us_page/innerPages/federalSkillTradesProg");
+const federalSkillWorkerProgSection = require("./models/about_us_page/innerPages/federalSkillWorkerProg");
+const frenchTargetedDrawSection = require("./models/about_us_page/innerPages/frenchTargetedDraw");
+
+const healthAuthorityStreamSection = require("./models/about_us_page/innerPages/healthAuthorityStream");
+const entryLevelSemiSkilledSection = require("./models/about_us_page/innerPages/entryLevelSemiSkilled");
+const internationalPostGraduateProgramSection = require("./models/about_us_page/innerPages/internationalPostGraduateProgram");
+const internationalGraduateProgramSection = require("./models/about_us_page/innerPages/internationalGraduateProgram");
+const bcPNPPageSection = require("./models/about_us_page/innerPages/bcPNP");
 
 let port = 4000;
 
@@ -5419,6 +5436,640 @@ app.put("/commonLawPartnerTemporary/:id", async (req, res) => {
 })
 //
 /////
+///
+app.get("/superVisa", async (request, response) => {
+  try {
+    let data = await superVisaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/superVisa", async (request, response) => {
+  try {
+    let data = await superVisaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/superVisa/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await superVisaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+///
+app.get("/temporaryResidentPermit", async (request, response) => {
+  try {
+    let data = await temporaryResidentPermSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/temporaryResidentPermit", async (request, response) => {
+  try {
+    let data = await temporaryResidentPermSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/temporaryResidentPermit/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await temporaryResidentPermSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+/////
+///
+app.get("/temporaryResidency", async (request, response) => {
+  try {
+    let data = await temporaryResidencySection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/temporaryResidency", async (request, response) => {
+  try {
+    let data = await temporaryResidencySection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/temporaryResidency/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await temporaryResidencySection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+/////
+///
+app.get("/visitorVisa", async (request, response) => {
+  try {
+    let data = await visitorVisaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/visitorVisa", async (request, response) => {
+  try {
+    let data = await visitorVisaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/visitorVisa/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await visitorVisaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+///
+app.get("/buisinessVisitorVisa", async (request, response) => {
+  try {
+    let data = await buisinessVisitorVisaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/buisinessVisitorVisa", async (request, response) => {
+  try {
+    let data = await buisinessVisitorVisaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/buisinessVisitorVisa/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await buisinessVisitorVisaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+///
+app.get("/dualIntetVisa", async (request, response) => {
+  try {
+    let data = await dualintentVisaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/dualIntetVisa", async (request, response) => {
+  try {
+    let data = await dualintentVisaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/dualIntetVisa/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await dualintentVisaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+
+///
+app.get("/canadianExperienceClass", async (request, response) => {
+  try {
+    let data = await canadianExperienceClassSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/canadianExperienceClass", async (request, response) => {
+  try {
+    let data = await canadianExperienceClassSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/canadianExperienceClass/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await canadianExperienceClassSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+
+///
+app.get("/federalSkilledTradedProgam", async (request, response) => {
+  try {
+    let data = await federalSkillTradesProgSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/federalSkilledTradedProgam", async (request, response) => {
+  try {
+    let data = await federalSkillTradesProgSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/federalSkilledTradedProgam/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await federalSkillTradesProgSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+
+///
+app.get("/federalSkilledWorkerProgam", async (request, response) => {
+  try {
+    let data = await federalSkillWorkerProgSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/federalSkilledWorkerProgam", async (request, response) => {
+  try {
+    let data = await federalSkillWorkerProgSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/federalSkilledWorkerProgam/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await federalSkillWorkerProgSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+////
+
+
+app.get("/frenchTargatedDraw", async (request, response) => {
+  try {
+    let data = await frenchTargetedDrawSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/frenchTargatedDraw", async (request, response) => {
+  try {
+    let data = await frenchTargetedDrawSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/frenchTargatedDraw/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await frenchTargetedDrawSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+
+
+//
+app.get("/health-authority-stream", async (request, response) => {
+  try {
+    let data = await healthAuthorityStreamSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/health-authority-stream", async (request, response) => {
+  try {
+    let data = await healthAuthorityStreamSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/health-authority-stream/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await healthAuthorityStreamSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+//
+
+app.get("/entry-level-semi-skilled", async (request, response) => {
+  try {
+    let data = await entryLevelSemiSkilledSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/entry-level-semi-skilled", async (request, response) => {
+  try {
+    let data = await entryLevelSemiSkilledSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/entry-level-semi-skilled/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await entryLevelSemiSkilledSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+//
+
+app.get(
+  "/international-post-graduate-program-page",
+  async (request, response) => {
+    try {
+      let data = await internationalPostGraduateProgramSection.find();
+      response.status(200).json(data);
+    } catch (error) {
+      console.log(error);
+      response.status(500).json({ message: error });
+    }
+  }
+);
+
+app.post(
+  "/international-post-graduate-program-page",
+  async (request, response) => {
+    try {
+      let data = await internationalPostGraduateProgramSection.create(
+        request.body
+      );
+      response.status(200).json(data);
+    } catch (error) {
+      console.log(error);
+      response.status(500).json({ message: error });
+    }
+  }
+);
+
+app.put("/international-post-graduate-program-page/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData =
+      await internationalPostGraduateProgramSection.findByIdAndUpdate(
+        id,
+        req.body,
+        {
+          new: true,
+        }
+      );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+app.get("/international-graduate-program-page", async (request, response) => {
+  try {
+    let data = await internationalGraduateProgramSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/international-graduate-program-page", async (request, response) => {
+  try {
+    let data = await internationalGraduateProgramSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/international-graduate-program-page/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData =
+      await internationalGraduateProgramSection.findByIdAndUpdate(
+        id,
+        req.body,
+        {
+          new: true,
+        }
+      );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+app.get("/bc-pnp-page", async (request, response) => {
+  try {
+    let data = await bcPNPPageSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/bc-pnp-page", async (request, response) => {
+  try {
+    let data = await bcPNPPageSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/bc-pnp-page/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await bcPNPPageSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+
+
+
+
+
 
 
 mongoose.set("strictQuery", false);
@@ -5430,8 +6081,8 @@ mongoose
     });
 
     // try {
-    //   const doc = await comLawPartTempSection.create({});
-    //   console.log("Document created with default values: comLawPartTempSection");
+    //   const doc = await frenchTargetedDrawSection.create({});
+    //   console.log("Document created with default values: frenchTargetedDrawSection");
     // } catch (err) {
     //   console.error("Error creating document:", err);
     // }
