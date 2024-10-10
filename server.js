@@ -111,6 +111,10 @@ const sdsSection = require("./models/about_us_page/innerPages/sds");
 const studyPermitMinorsSection = require("./models/about_us_page/innerPages/studyPermitMinors");
 const extensionSection = require("./models/about_us_page/innerPages/extension");
 const flagpolingSection = require("./models/about_us_page/innerPages/flagpoling");
+const restorationStatusDraftSection = require("./models/about_us_page/innerPages/restorationStatusDraft");
+const spousalOpenWokPerSection = require("./models/about_us_page/innerPages/spousalOpenWokPer");
+const comLawPartPermanSection = require("./models/about_us_page/innerPages/comLawPartPerman");
+const comLawPartTempSection = require("./models/about_us_page/innerPages/comLawPartTemp");
 
 let port = 4000;
 
@@ -5204,10 +5208,6 @@ app.put("/extensionsDraft/:id", async (req, res) => {
 
 
 
-
-
-
-
 ///
 app.get("/flagpoling", async (request, response) => {
   try {
@@ -5251,8 +5251,174 @@ app.put("/flagpoling/:id", async (req, res) => {
 //
 
 
+///
+app.get("/restorationStatus", async (request, response) => {
+  try {
+    let data = await restorationStatusDraftSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
 
+app.post("/restorationStatus", async (request, response) => {
+  try {
+    let data = await restorationStatusDraftSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
 
+app.put("/restorationStatus/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await restorationStatusDraftSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+/////
+///
+app.get("/spousalOpenWorkPermit", async (request, response) => {
+  try {
+    let data = await spousalOpenWokPerSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/spousalOpenWorkPermit", async (request, response) => {
+  try {
+    let data = await spousalOpenWokPerSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/spousalOpenWorkPermit/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await spousalOpenWokPerSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+/////
+///
+app.get("/commonLawPartnerPermanent", async (request, response) => {
+  try {
+    let data = await comLawPartPermanSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/commonLawPartnerPermanent", async (request, response) => {
+  try {
+    let data = await comLawPartPermanSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/commonLawPartnerPermanent/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await comLawPartPermanSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+/////
+///
+app.get("/commonLawPartnerTemporary", async (request, response) => {
+  try {
+    let data = await comLawPartTempSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/commonLawPartnerTemporary", async (request, response) => {
+  try {
+    let data = await comLawPartTempSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/commonLawPartnerTemporary/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await comLawPartTempSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+})
+//
+/////
 
 
 mongoose.set("strictQuery", false);
@@ -5264,8 +5430,8 @@ mongoose
     });
 
     // try {
-    //   const doc = await flagpolingSection.create({});
-    //   console.log("Document created with default values: flagpolingSection");
+    //   const doc = await comLawPartTempSection.create({});
+    //   console.log("Document created with default values: comLawPartTempSection");
     // } catch (err) {
     //   console.error("Error creating document:", err);
     // }
