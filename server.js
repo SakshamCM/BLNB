@@ -134,6 +134,12 @@ const internationalGraduateProgramSection = require("./models/about_us_page/inne
 const bcPNPPageSection = require("./models/about_us_page/innerPages/bcPNP");
 const healthcareTargatedDrawSection = require("./models/about_us_page/innerPages/healthcareTargatedDraw");
 const PNPPageSection = require("./models/about_us_page/innerPages/pNP");
+const stemTargetedDrawSection = require("./models/about_us_page/innerPages/stemTargetedDraw");
+const tradeOccupationTargDrawSection = require("./models/about_us_page/innerPages/tradeOccupationTargDraw");
+const pilotProgramSection = require("./models/about_us_page/innerPages/pilotProgram");
+const agriFoodPilotSection = require("./models/about_us_page/innerPages/agriFoodPilotProg");
+
+const rNIPSection = require("./models/about_us_page/innerPages/rNIP");
 
 let port = 4000;
 
@@ -6141,11 +6147,235 @@ app.put("/pnp-page/:id", async (req, res) => {
   }
 });
 
+///
+
+app.get("/stemTagatedDraw", async (request, response) => {
+  try {
+    let data = await stemTargetedDrawSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/stemTagatedDraw", async (request, response) => {
+  try {
+    let data = await stemTargetedDrawSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/stemTagatedDraw/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await stemTargetedDrawSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+///
+
+app.get("/tradeOccupationTargetedDraw", async (request, response) => {
+  try {
+    let data = await tradeOccupationTargDrawSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/tradeOccupationTargetedDraw", async (request, response) => {
+  try {
+    let data = await tradeOccupationTargDrawSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/tradeOccupationTargetedDraw/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await tradeOccupationTargDrawSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
 
 
+///
+
+app.get("/transportOccupaationTargetedDraw", async (request, response) => {
+  try {
+    let data = await transportOccupationSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/transportOccupaationTargetedDraw", async (request, response) => {
+  try {
+    let data = await transportOccupationSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/transportOccupaationTargetedDraw/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await transportOccupationSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+///
+
+app.get("/pilotProgram", async (request, response) => {
+  try {
+    let data = await pilotProgramSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/pilotProgram", async (request, response) => {
+  try {
+    let data = await pilotProgramSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/pilotProgram/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await pilotProgramSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
 
 
+///
 
+app.get("/agiFoodPilotProgram", async (request, response) => {
+  try {
+    let data = await agriFoodPilotSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/agiFoodPilotProgram", async (request, response) => {
+  try {
+    let data = await agriFoodPilotSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/agiFoodPilotProgram/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await agriFoodPilotSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+///
+
+app.get("/rnip-page", async (request, response) => {
+  try {
+    let data = await rNIPSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/rnip-page", async (request, response) => {
+  try {
+    let data = await rNIPSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/rnip-page/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await rNIPSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
 
 mongoose.set("strictQuery", false);
 mongoose
@@ -6156,8 +6386,8 @@ mongoose
     });
 
     // try {
-    //   const doc = await healthcareTargatedDrawSection.create({});
-    //   console.log("Document created with default values: healthcareTargatedDrawSection");
+    //   const doc = await agriFoodPilotSection.create({});
+    //   console.log("Document created with default values: agriFoodPilotSection");
     // } catch (err) {
     //   console.error("Error creating document:", err);
     // }
