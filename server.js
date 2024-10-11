@@ -142,6 +142,64 @@ const agriFoodPilotSection = require("./models/about_us_page/innerPages/agriFood
 const rNIPSection = require("./models/about_us_page/innerPages/rNIP");
 const spouseCommLawSponSection = require("./models/about_us_page/innerPages/spouseCommLawSpon");
 const agricultAndAgriFoodOccuSection = require("./models/about_us_page/innerPages/agricultAndAgriFoodOccu");
+const additionalDocumentMetaSection = require("./models/about_us_page/innerPages/metas/additionalDocumentMeta");
+const adoptionMetaSection = require("./models/about_us_page/innerPages/metas/adoptionMeta");
+const agricultAndAgriFoodOccuMetaSection = require("./models/about_us_page/innerPages/metas/agricultAndAgriFoodOccuMeta");
+const agriFoodPilotProgMetaSection = require("./models/about_us_page/innerPages/metas/agriFoodPilotProgMeta");
+const bcPNPMetaSection = require("./models/about_us_page/innerPages/metas/bcPNPMeta");
+const bridgingOpenWorkMetaSection = require("./models/about_us_page/innerPages/metas/bridgingOpenWorkMeta");
+const buisinessVisitorVisaMetaSection = require("./models/about_us_page/innerPages/metas/buisinessVisitorVisaMeta");
+const canadianExperienceClassMetaSection = require("./models/about_us_page/innerPages/metas/canadianExperienceClassMeta");
+const changeCollegeProgMetaSection = require("./models/about_us_page/innerPages/metas/changeCollegeProgMeta");
+const citizenshipMetaSection = require("./models/about_us_page/innerPages/metas/citizenshipMeta");
+const comLawPartPermanMetaSection = require("./models/about_us_page/innerPages/metas/comLawPartPermanMeta");
+const comLawPartTempMetaSection = require("./models/about_us_page/innerPages/metas/comLawPartTempMeta");
+const dependentChildMetaSection = require("./models/about_us_page/innerPages/metas/dependentChildMeta");
+const dualintentVisaMetaSection = require("./models/about_us_page/innerPages/metas/dualintentVisaMeta");
+const entryLevelSemiSkilledMetaSection = require("./models/about_us_page/innerPages/metas/entryLevelSemiSkilledMeta");
+const extensionMetaSection = require("./models/about_us_page/innerPages/metas/extensionMeta");
+const familyReunificationMetaSection = require("./models/about_us_page/innerPages/metas/familyReunificationMeta");
+const federalSkillTradesProgMetaSection = require("./models/about_us_page/innerPages/metas/federalSkillTradesProgMeta");
+const federalSkillWorkerProgMetaSection = require("./models/about_us_page/innerPages/metas/federalSkillWorkerProgMeta");
+const flagpolingMetaSection = require("./models/about_us_page/innerPages/metas/flagpolingMeta");
+const francophoneMobilityMetaSection = require("./models/about_us_page/innerPages/metas/francophoneMobilityMeta");
+const frenchTargetedDrawMetaSection = require("./models/about_us_page/innerPages/metas/frenchTargetedDrawMeta");
+const globalStreamLmiaMetaSection = require("./models/about_us_page/innerPages/metas/globalStreamLmiaMeta");
+const healthAuthorityStreamMetaSection = require("./models/about_us_page/innerPages/metas/healthAuthorityStreamMeta");
+const healthcareTargatedDrawMetaSection = require("./models/about_us_page/innerPages/metas/healthcareTargatedDrawMeta");
+const humanitarianComMetaSection = require("./models/about_us_page/innerPages/metas/humanitarianComMeta");
+const inHomeCaregiverProgramLpMetaSection = require("./models/about_us_page/innerPages/metas/inHomeCaregiverProgramLpMeta");
+const insideCanadaMetaSection = require("./models/about_us_page/innerPages/metas/insideCanadaMeta");
+const internationalGraduateProgMetaSection = require("./models/about_us_page/innerPages/metas/internationalGraduateProgMeta");
+const internationalPostGraduateProgMetaSection = require("./models/about_us_page/innerPages/metas/internationalPostGraduateProgMeta");
+const LmiaMetaSection = require("./models/about_us_page/innerPages/metas/LmiaMeta");
+const lonelyCanadianMetaSection = require("./models/about_us_page/innerPages/metas/lonelyCanadianMeta");
+const nonSdsMetaSection = require("./models/about_us_page/innerPages/metas/nonSdsMeta");
+const openWorkDependentChildMetaSection = require("./models/about_us_page/innerPages/metas/openWorkDependentChildMeta");
+const openWorkPerMetaSection = require("./models/about_us_page/innerPages/metas/openWorkPerMeta");
+const openWorkVulnerableMetaSection = require("./models/about_us_page/innerPages/metas/openWorkVulnerableMeta");
+const orphanMetaSection = require("./models/about_us_page/innerPages/metas/orphanMeta");
+const outsideCanadaMetaSection = require("./models/about_us_page/innerPages/metas/outsideCanadaMeta");
+const parentsGrandParMetaSection = require("./models/about_us_page/innerPages/metas/parentsGrandParMeta");
+const pathwaysForCaregiverMetaSection = require("./models/about_us_page/innerPages/metas/pathwaysForCaregiverMeta");
+const pgwpMetaSection = require("./models/about_us_page/innerPages/metas/pgwpMeta");
+const pilotProgramMetaSection = require("./models/about_us_page/innerPages/metas/pilotProgramMeta");
+const pNPMetaSection = require("./models/about_us_page/innerPages/metas/pNPMeta");
+const prioritiesProgramMetaSection = require("./models/about_us_page/innerPages/metas/prioritiesProgramMeta");
+const prPathCareLpMetaSection = require("./models/about_us_page/innerPages/metas/prPathCareLpMeta");
+const prRenewalMetaSection = require("./models/about_us_page/innerPages/metas/prRenewalMeta");
+const reconsiderationMetaSection = require("./models/about_us_page/innerPages/metas/reconsiderationMeta");
+const replyPFLMetaSection = require("./models/about_us_page/innerPages/metas/replyPFLMeta");
+const restorationStatusDraftMetaSection = require("./models/about_us_page/innerPages/metas/restorationStatusDraftMeta");
+const rNIPMetaSection = require("./models/about_us_page/innerPages/metas/rNIPMeta");
+const sdsMetaSection = require("./models/about_us_page/innerPages/metas/sdsMeta");
+const skilledWorkerStreamMetaSection = require("./models/about_us_page/innerPages/metas/skilledWorkerStreamMeta");
+const spousalOpenWokPerMetaSection = require("./models/about_us_page/innerPages/metas/spousalOpenWokPerMeta");
+const spouseCommLawSponMetaSection = require("./models/about_us_page/innerPages/metas/spouseCommLawSponMeta");
+const stemTargetedDrawMetaSection = require("./models/about_us_page/innerPages/metas/stemTargetedDrawMeta");
+const studentVisaMetaSection = require("./models/about_us_page/innerPages/metas/studentVisaMeta");
+const studyPermitMinorsMetaSection = require("./models/about_us_page/innerPages/metas/studyPermitMinorsMeta");
+const superVisaMetaSection = require("./models/about_us_page/innerPages/metas/superVisaMeta");
 
 let port = 4000;
 
@@ -6458,6 +6516,2332 @@ app.put("/agricultureAgriFoodOccupation/:id", async (req, res) => {
 });
 
 
+
+///
+
+app.get("/addDocMeta", async (request, response) => {
+  try {
+    let data = await additionalDocumentMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/addDocMeta", async (request, response) => {
+  try {
+    let data = await additionalDocumentMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/addDocMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await additionalDocumentMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+///
+
+app.get("/adopMeta", async (request, response) => {
+  try {
+    let data = await adoptionMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/adopMeta", async (request, response) => {
+  try {
+    let data = await adoptionMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/adopMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await adoptionMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+
+///
+
+app.get("/agricultAndAgriFoodOccuMeta", async (request, response) => {
+  try {
+    let data = await agricultAndAgriFoodOccuMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/agricultAndAgriFoodOccuMeta", async (request, response) => {
+  try {
+    let data = await agricultAndAgriFoodOccuMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/agricultAndAgriFoodOccuMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await agricultAndAgriFoodOccuMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+///
+
+app.get("/agriFoodPilotProgMeta", async (request, response) => {
+  try {
+    let data = await agriFoodPilotProgMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/agriFoodPilotProgMeta", async (request, response) => {
+  try {
+    let data = await agriFoodPilotProgMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/agriFoodPilotProgMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await agriFoodPilotProgMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+///
+
+app.get("/bcPNPMeta", async (request, response) => {
+  try {
+    let data = await bcPNPMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/bcPNPMeta", async (request, response) => {
+  try {
+    let data = await bcPNPMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/bcPNPMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await bcPNPMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+///
+
+app.get("/bridgingOpenWorkMeta", async (request, response) => {
+  try {
+    let data = await bridgingOpenWorkMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/bridgingOpenWorkMeta", async (request, response) => {
+  try {
+    let data = await bridgingOpenWorkMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/bridgingOpenWorkMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await bridgingOpenWorkMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+///
+
+
+app.get("/buisinessVisitorVisaMeta", async (request, response) => {
+  try {
+    let data = await buisinessVisitorVisaMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/buisinessVisitorVisaMeta", async (request, response) => {
+  try {
+    let data = await buisinessVisitorVisaMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/buisinessVisitorVisaMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await buisinessVisitorVisaMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+///
+
+
+app.get("/canadianExperienceClassMeta", async (request, response) => {
+  try {
+    let data = await canadianExperienceClassMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/canadianExperienceClassMeta", async (request, response) => {
+  try {
+    let data = await canadianExperienceClassMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/canadianExperienceClassMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await canadianExperienceClassMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+
+///
+
+
+app.get("/changeCollegeProgMeta", async (request, response) => {
+  try {
+    let data = await changeCollegeProgMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/changeCollegeProgMeta", async (request, response) => {
+  try {
+    let data = await changeCollegeProgMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/changeCollegeProgMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await changeCollegeProgMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+
+
+///
+
+
+app.get("/citizenshipMeta", async (request, response) => {
+  try {
+    let data = await citizenshipMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/citizenshipMeta", async (request, response) => {
+  try {
+    let data = await citizenshipMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/citizenshipMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await citizenshipMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+///
+
+
+app.get("/comLawPartPermanMeta", async (request, response) => {
+  try {
+    let data = await comLawPartPermanMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/comLawPartPermanMeta", async (request, response) => {
+  try {
+    let data = await comLawPartPermanMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/comLawPartPermanMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await comLawPartPermanMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+///
+
+
+app.get("/comLawPartTempMeta", async (request, response) => {
+  try {
+    let data = await comLawPartTempMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/comLawPartTempMeta", async (request, response) => {
+  try {
+    let data = await comLawPartTempMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/comLawPartTempMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await comLawPartTempMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+///
+
+
+app.get("/dependentChildMeta", async (request, response) => {
+  try {
+    let data = await dependentChildMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/dependentChildMeta", async (request, response) => {
+  try {
+    let data = await dependentChildMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/dependentChildMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await dependentChildMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+///
+
+
+app.get("/dualintentVisaMeta", async (request, response) => {
+  try {
+    let data = await dualintentVisaMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/dualintentVisaMeta", async (request, response) => {
+  try {
+    let data = await dualintentVisaMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/dualintentVisaMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await dualintentVisaMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+///
+
+
+app.get("/entryLevelSemiSkilledMeta", async (request, response) => {
+  try {
+    let data = await entryLevelSemiSkilledMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/entryLevelSemiSkilledMeta", async (request, response) => {
+  try {
+    let data = await entryLevelSemiSkilledMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/entryLevelSemiSkilledMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await entryLevelSemiSkilledMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+///
+
+
+app.get("/extensionMeta", async (request, response) => {
+  try {
+    let data = await extensionMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/extensionMeta", async (request, response) => {
+  try {
+    let data = await extensionMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/extensionMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await extensionMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+///
+
+
+app.get("/familyReunificationMeta", async (request, response) => {
+  try {
+    let data = await familyReunificationMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/familyReunificationMeta", async (request, response) => {
+  try {
+    let data = await familyReunificationMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/familyReunificationMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await familyReunificationMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+///
+
+
+app.get("/federalSkillTradesProgMeta", async (request, response) => {
+  try {
+    let data = await federalSkillTradesProgMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/federalSkillTradesProgMeta", async (request, response) => {
+  try {
+    let data = await federalSkillTradesProgMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/federalSkillTradesProgMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await federalSkillTradesProgMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+
+///
+
+
+app.get("/federalSkillWorkerProgMeta", async (request, response) => {
+  try {
+    let data = await federalSkillWorkerProgMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/federalSkillWorkerProgMeta", async (request, response) => {
+  try {
+    let data = await federalSkillWorkerProgMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/federalSkillWorkerProgMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await federalSkillWorkerProgMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+///
+
+
+app.get("/flagpolingMeta", async (request, response) => {
+  try {
+    let data = await flagpolingMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/flagpolingMeta", async (request, response) => {
+  try {
+    let data = await flagpolingMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/flagpolingMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await flagpolingMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+///
+
+
+app.get("/francophoneMobilityMeta", async (request, response) => {
+  try {
+    let data = await francophoneMobilityMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/francophoneMobilityMeta", async (request, response) => {
+  try {
+    let data = await francophoneMobilityMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/francophoneMobilityMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await francophoneMobilityMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+///
+
+
+app.get("/frenchTargetedDrawMeta", async (request, response) => {
+  try {
+    let data = await frenchTargetedDrawMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/frenchTargetedDrawMeta", async (request, response) => {
+  try {
+    let data = await frenchTargetedDrawMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/frenchTargetedDrawMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await frenchTargetedDrawMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+///
+
+
+app.get("/globalStreamLmiaMeta", async (request, response) => {
+  try {
+    let data = await globalStreamLmiaMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/globalStreamLmiaMeta", async (request, response) => {
+  try {
+    let data = await globalStreamLmiaMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/globalStreamLmiaMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await globalStreamLmiaMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+///
+
+
+app.get("/healthAuthorityStreamMeta", async (request, response) => {
+  try {
+    let data = await healthAuthorityStreamMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/healthAuthorityStreamMeta", async (request, response) => {
+  try {
+    let data = await healthAuthorityStreamMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/healthAuthorityStreamMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await healthAuthorityStreamMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+
+///
+
+
+app.get("/healthcareTargatedDrawMeta", async (request, response) => {
+  try {
+    let data = await healthcareTargatedDrawMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/healthcareTargatedDrawMeta", async (request, response) => {
+  try {
+    let data = await healthcareTargatedDrawMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/healthcareTargatedDrawMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await healthcareTargatedDrawMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+///
+
+
+app.get("/humanitarianComMeta", async (request, response) => {
+  try {
+    let data = await humanitarianComMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/humanitarianComMeta", async (request, response) => {
+  try {
+    let data = await humanitarianComMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/humanitarianComMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await humanitarianComMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+///
+
+
+app.get("/inHomeCaregiverProgramLpMeta", async (request, response) => {
+  try {
+    let data = await inHomeCaregiverProgramLpMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/inHomeCaregiverProgramLpMeta", async (request, response) => {
+  try {
+    let data = await inHomeCaregiverProgramLpMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/inHomeCaregiverProgramLpMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await inHomeCaregiverProgramLpMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+///
+
+
+app.get("/insideCanadaMeta", async (request, response) => {
+  try {
+    let data = await insideCanadaMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/insideCanadaMeta", async (request, response) => {
+  try {
+    let data = await insideCanadaMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/insideCanadaMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await insideCanadaMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+///
+
+
+app.get("/internationalGraduateProgMeta", async (request, response) => {
+  try {
+    let data = await internationalGraduateProgMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/internationalGraduateProgMeta", async (request, response) => {
+  try {
+    let data = await internationalGraduateProgMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/internationalGraduateProgMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await internationalGraduateProgMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+///
+
+
+app.get("/internationalPostGraduateProgMeta", async (request, response) => {
+  try {
+    let data = await internationalPostGraduateProgMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/internationalPostGraduateProgMeta", async (request, response) => {
+  try {
+    let data = await internationalPostGraduateProgMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/internationalPostGraduateProgMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await internationalPostGraduateProgMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+///
+
+
+app.get("/LmiaMeta", async (request, response) => {
+  try {
+    let data = await LmiaMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/LmiaMeta", async (request, response) => {
+  try {
+    let data = await LmiaMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/LmiaMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await LmiaMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+///
+
+
+app.get("/lonelyCanadianMeta", async (request, response) => {
+  try {
+    let data = await lonelyCanadianMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/lonelyCanadianMeta", async (request, response) => {
+  try {
+    let data = await lonelyCanadianMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/lonelyCanadianMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await lonelyCanadianMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+///
+
+
+app.get("/nonSdsMeta", async (request, response) => {
+  try {
+    let data = await nonSdsMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/nonSdsMeta", async (request, response) => {
+  try {
+    let data = await nonSdsMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/nonSdsMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await nonSdsMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+//
+
+app.get("/openWorkDependentChildMeta", async (request, response) => {
+  try {
+    let data = await openWorkDependentChildMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/openWorkDependentChildMeta", async (request, response) => {
+  try {
+    let data = await openWorkDependentChildMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/openWorkDependentChildMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await openWorkDependentChildMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+//
+
+app.get("/openWorkPerMeta", async (request, response) => {
+  try {
+    let data = await openWorkPerMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/openWorkPerMeta", async (request, response) => {
+  try {
+    let data = await openWorkPerMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/openWorkPerMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await openWorkPerMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+//
+
+app.get("/openWorkVulnerableMeta", async (request, response) => {
+  try {
+    let data = await openWorkVulnerableMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/openWorkVulnerableMeta", async (request, response) => {
+  try {
+    let data = await openWorkVulnerableMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/openWorkVulnerableMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await openWorkVulnerableMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+//
+
+app.get("/orphanMeta", async (request, response) => {
+  try {
+    let data = await orphanMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/orphanMeta", async (request, response) => {
+  try {
+    let data = await orphanMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/orphanMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await orphanMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+
+//
+
+app.get("/outsideCanadaMeta", async (request, response) => {
+  try {
+    let data = await outsideCanadaMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/outsideCanadaMeta", async (request, response) => {
+  try {
+    let data = await outsideCanadaMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/outsideCanadaMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await outsideCanadaMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+
+
+//
+
+app.get("/parentsGrandParMeta", async (request, response) => {
+  try {
+    let data = await parentsGrandParMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/parentsGrandParMeta", async (request, response) => {
+  try {
+    let data = await parentsGrandParMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/parentsGrandParMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await parentsGrandParMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+
+//
+
+app.get("/pathwaysForCaregiverMeta", async (request, response) => {
+  try {
+    let data = await pathwaysForCaregiverMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/pathwaysForCaregiverMeta", async (request, response) => {
+  try {
+    let data = await pathwaysForCaregiverMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/pathwaysForCaregiverMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await pathwaysForCaregiverMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+//
+
+app.get("/pgwpMeta", async (request, response) => {
+  try {
+    let data = await pgwpMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/pgwpMeta", async (request, response) => {
+  try {
+    let data = await pgwpMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/pgwpMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await pgwpMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+//
+
+app.get("/pilotProgramMeta", async (request, response) => {
+  try {
+    let data = await pilotProgramMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/pilotProgramMeta", async (request, response) => {
+  try {
+    let data = await pilotProgramMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/pilotProgramMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await pilotProgramMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+//
+
+app.get("/pNPMeta", async (request, response) => {
+  try {
+    let data = await pNPMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/pNPMeta", async (request, response) => {
+  try {
+    let data = await pNPMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/pNPMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await pNPMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+//
+
+app.get("/prioritiesProgramMeta", async (request, response) => {
+  try {
+    let data = await prioritiesProgramMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/prioritiesProgramMeta", async (request, response) => {
+  try {
+    let data = await prioritiesProgramMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/prioritiesProgramMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await prioritiesProgramMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+
+//
+
+app.get("/prPathCareLpMeta", async (request, response) => {
+  try {
+    let data = await prPathCareLpMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/prPathCareLpMeta", async (request, response) => {
+  try {
+    let data = await prPathCareLpMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/prPathCareLpMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await prPathCareLpMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+//
+
+app.get("/prRenewalMeta", async (request, response) => {
+  try {
+    let data = await prRenewalMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/prRenewalMeta", async (request, response) => {
+  try {
+    let data = await prRenewalMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/prRenewalMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await prRenewalMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+//
+
+app.get("/reconsiderationMeta", async (request, response) => {
+  try {
+    let data = await reconsiderationMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/reconsiderationMeta", async (request, response) => {
+  try {
+    let data = await reconsiderationMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/reconsiderationMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await reconsiderationMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+//
+
+app.get("/replyPFLMeta", async (request, response) => {
+  try {
+    let data = await replyPFLMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/replyPFLMeta", async (request, response) => {
+  try {
+    let data = await replyPFLMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/replyPFLMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await replyPFLMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+//
+
+app.get("/restorationStatusDraftMeta", async (request, response) => {
+  try {
+    let data = await restorationStatusDraftMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/restorationStatusDraftMeta", async (request, response) => {
+  try {
+    let data = await restorationStatusDraftMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/restorationStatusDraftMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await restorationStatusDraftMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+//
+
+app.get("/rNIPMeta", async (request, response) => {
+  try {
+    let data = await rNIPMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/rNIPMeta", async (request, response) => {
+  try {
+    let data = await rNIPMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/rNIPMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await rNIPMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+//
+
+app.get("/sdsMeta", async (request, response) => {
+  try {
+    let data = await sdsMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/sdsMeta", async (request, response) => {
+  try {
+    let data = await sdsMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/sdsMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await sdsMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+//
+
+app.get("/skilledWorkerStreamMeta", async (request, response) => {
+  try {
+    let data = await skilledWorkerStreamMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/skilledWorkerStreamMeta", async (request, response) => {
+  try {
+    let data = await skilledWorkerStreamMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/skilledWorkerStreamMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await skilledWorkerStreamMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+
+//
+
+app.get("/spousalOpenWokPerMeta", async (request, response) => {
+  try {
+    let data = await spousalOpenWokPerMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/spousalOpenWokPerMeta", async (request, response) => {
+  try {
+    let data = await spousalOpenWokPerMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/spousalOpenWokPerMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await spousalOpenWokPerMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+//
+
+app.get("/spouseCommLawSponMeta", async (request, response) => {
+  try {
+    let data = await spouseCommLawSponMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/spouseCommLawSponMeta", async (request, response) => {
+  try {
+    let data = await spouseCommLawSponMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/spouseCommLawSponMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await spouseCommLawSponMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+//
+
+app.get("/stemTargetedDrawMeta", async (request, response) => {
+  try {
+    let data = await stemTargetedDrawMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/stemTargetedDrawMeta", async (request, response) => {
+  try {
+    let data = await stemTargetedDrawMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/stemTargetedDrawMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await stemTargetedDrawMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+//
+
+app.get("/studentVisaMeta", async (request, response) => {
+  try {
+    let data = await studentVisaMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/studentVisaMeta", async (request, response) => {
+  try {
+    let data = await studentVisaMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/studentVisaMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await studentVisaMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+//
+
+app.get("/studyPermitMinorsMeta", async (request, response) => {
+  try {
+    let data = await studyPermitMinorsMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/studyPermitMinorsMeta", async (request, response) => {
+  try {
+    let data = await studyPermitMinorsMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/studyPermitMinorsMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await studyPermitMinorsMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+app.get("/superVisaMeta", async (request, response) => {
+  try {
+    let data = await superVisaMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/superVisaMeta", async (request, response) => {
+  try {
+    let data = await superVisaMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/superVisaMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await superVisaMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
 mongoose.set("strictQuery", false);
 mongoose
   .connect(process.env.MONGO_CLI)
@@ -6467,8 +8851,8 @@ mongoose
     });
 
     // try {
-    //   const doc = await spouseCommLawSponSection.create({});
-    //   console.log("Document created with default values: spouseCommLawSponSection");
+    //   const doc = await superVisaMetaSection.create({});
+    //   console.log("Document created with default values: superVisaMetaSection");
     // } catch (err) {
     //   console.error("Error creating document:", err);
     // }

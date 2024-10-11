@@ -14,7 +14,7 @@ let aboutMetaSchema = mongoose.Schema(
       type: String,
     },
     metaKeywords: {
-      type: String
+      type: String,
     }
   },
   {
