@@ -696,5 +696,5 @@ let rnipSchema = mongoose.Schema(
   }
 );
 
-let rNIPSection = mongoose.model("Program Priorities Latest Page", rnipSchema);
+let rNIPSection = mongoose.model("RNIP Page", rnipSchema);
 module.exports = rNIPSection;
