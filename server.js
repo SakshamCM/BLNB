@@ -140,6 +140,8 @@ const pilotProgramSection = require("./models/about_us_page/innerPages/pilotProg
 const agriFoodPilotSection = require("./models/about_us_page/innerPages/agriFoodPilotProg");
 
 const rNIPSection = require("./models/about_us_page/innerPages/rNIP");
+const spouseCommLawSponSection = require("./models/about_us_page/innerPages/spouseCommLawSpon");
+const agricultAndAgriFoodOccuSection = require("./models/about_us_page/innerPages/agricultAndAgriFoodOccu");
 
 let port = 4000;
 
@@ -6377,6 +6379,85 @@ app.put("/rnip-page/:id", async (req, res) => {
   }
 });
 
+
+///
+
+app.get("/spouseCommomlawSponsership", async (request, response) => {
+  try {
+    let data = await spouseCommLawSponSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/spouseCommomlawSponsership", async (request, response) => {
+  try {
+    let data = await spouseCommLawSponSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/spouseCommomlawSponsership/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await spouseCommLawSponSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+///
+
+app.get("/agricultureAgriFoodOccupation", async (request, response) => {
+  try {
+    let data = await agricultAndAgriFoodOccuSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/agricultureAgriFoodOccupation", async (request, response) => {
+  try {
+    let data = await agricultAndAgriFoodOccuSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/agricultureAgriFoodOccupation/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await agricultAndAgriFoodOccuSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
 mongoose.set("strictQuery", false);
 mongoose
   .connect(process.env.MONGO_CLI)
@@ -6386,8 +6467,8 @@ mongoose
     });
 
     // try {
-    //   const doc = await agriFoodPilotSection.create({});
-    //   console.log("Document created with default values: agriFoodPilotSection");
+    //   const doc = await spouseCommLawSponSection.create({});
+    //   console.log("Document created with default values: spouseCommLawSponSection");
     // } catch (err) {
     //   console.error("Error creating document:", err);
     // }
