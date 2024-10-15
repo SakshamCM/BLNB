@@ -4395,21 +4395,22 @@ app.post("/bridgingOpenWork", async (request, response) => {
 app.put("/bridgingOpenWork/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await bridgingOpenSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await bridgingOpenSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
     res.status(200).json(updatedData);
   } catch (error) {
-    console.log(error);  
-    res.status(500).json({ message: error.message }); 
+    console.log(error);
+    res.status(500).json({ message: error.message });
   }
 });
-
-
-
 
 ////
 
@@ -4436,22 +4437,22 @@ app.post("/francoMob", async (request, response) => {
 app.put("/francoMob/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await francophoneMobilitySection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await francophoneMobilitySection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
     res.status(200).json(updatedData);
   } catch (error) {
-    console.log(error);  
-    res.status(500).json({ message: error.message }); 
+    console.log(error);
+    res.status(500).json({ message: error.message });
   }
 });
-
-
-
-
 
 ////
 
@@ -4478,23 +4479,24 @@ app.post("/openWorkVulnerable", async (request, response) => {
 app.put("/openWorkVulnerable/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await openWorkVulnerableSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await openWorkVulnerableSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
     res.status(200).json(updatedData);
   } catch (error) {
-    console.log(error);  
-    res.status(500).json({ message: error.message }); 
+    console.log(error);
+    res.status(500).json({ message: error.message });
   }
 });
 
-
 ///
-
-
 
 app.get("/openWorkDependentChild", async (request, response) => {
   try {
@@ -4519,23 +4521,24 @@ app.post("/openWorkDependentChild", async (request, response) => {
 app.put("/openWorkDependentChild/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await openWorkDependentChildSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await openWorkDependentChildSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
     res.status(200).json(updatedData);
   } catch (error) {
-    console.log(error);  
-    res.status(500).json({ message: error.message }); 
+    console.log(error);
+    res.status(500).json({ message: error.message });
   }
 });
 
-
 ///
-
-
 
 app.get("/pgwp", async (request, response) => {
   try {
@@ -4568,15 +4571,12 @@ app.put("/pgwp/:id", async (req, res) => {
     }
     res.status(200).json(updatedData);
   } catch (error) {
-    console.log(error);  
-    res.status(500).json({ message: error.message }); 
+    console.log(error);
+    res.status(500).json({ message: error.message });
   }
 });
 
-
 ///
-
-
 
 app.get("/familyReunification", async (request, response) => {
   try {
@@ -4601,19 +4601,22 @@ app.post("/familyReunification", async (request, response) => {
 app.put("/familyReunification/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await familyReunificationSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await familyReunificationSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
     res.status(200).json(updatedData);
   } catch (error) {
-    console.log(error);  
-    res.status(500).json({ message: error.message }); 
+    console.log(error);
+    res.status(500).json({ message: error.message });
   }
 });
-
 
 ///
 
@@ -4650,13 +4653,12 @@ app.put("/adoption/:id", async (req, res) => {
     }
     res.status(200).json(updatedData);
   } catch (error) {
-    console.log(error);  
-    res.status(500).json({ message: error.message }); 
+    console.log(error);
+    res.status(500).json({ message: error.message });
   }
 });
 
 ////
-
 
 app.get("/dependentChildren", async (request, response) => {
   try {
@@ -4681,22 +4683,24 @@ app.post("/dependentChildren", async (request, response) => {
 app.put("/dependentChildren/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await DependentChildrenSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await DependentChildrenSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
     res.status(200).json(updatedData);
   } catch (error) {
-    console.log(error);  
-    res.status(500).json({ message: error.message }); 
+    console.log(error);
+    res.status(500).json({ message: error.message });
   }
 });
 
-
 ///
-
 
 app.get("/priorities-program-page", async (request, response) => {
   try {
@@ -4823,7 +4827,6 @@ app.put("/lonelyCanadian/:id", async (req, res) => {
 
 //
 
-
 app.get("/ParentsGrandparents", async (request, response) => {
   try {
     let data = await parentsGrandParSection.find();
@@ -4866,7 +4869,6 @@ app.put("/ParentsGrandparents/:id", async (req, res) => {
 
 //
 
-
 app.get("/studentVisa", async (request, response) => {
   try {
     let data = await studentVisaSection.find();
@@ -4890,13 +4892,9 @@ app.post("/studentVisa", async (request, response) => {
 app.put("/studentVisa/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await studentVisaSection.findByIdAndUpdate(
-      id,
-      req.body,
-      {
-        new: true,
-      }
-    );
+    let updatedData = await studentVisaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -4907,10 +4905,7 @@ app.put("/studentVisa/:id", async (req, res) => {
   }
 });
 
-
-
 //
-
 
 app.get("/orphan", async (request, response) => {
   try {
@@ -4935,13 +4930,9 @@ app.post("/orphan", async (request, response) => {
 app.put("/orphan/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await orphanSection.findByIdAndUpdate(
-      id,
-      req.body,
-      {
-        new: true,
-      }
-    );
+    let updatedData = await orphanSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -4950,9 +4941,8 @@ app.put("/orphan/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
-
 
 app.get("/insideCanada", async (request, response) => {
   try {
@@ -4992,12 +4982,10 @@ app.put("/insideCanada/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
 
-
 //
-
 
 app.get("/changeCollegeProgram", async (request, response) => {
   try {
@@ -5037,11 +5025,10 @@ app.put("/changeCollegeProgram/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
 
 //
-
 
 app.get("/visitorToStudent", async (request, response) => {
   try {
@@ -5081,10 +5068,9 @@ app.put("/visitorToStudent/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
 //
-
 
 app.get("/outsideCanada", async (request, response) => {
   try {
@@ -5124,11 +5110,10 @@ app.put("/outsideCanada/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
 
 //
-
 
 app.get("/nonSds", async (request, response) => {
   try {
@@ -5153,13 +5138,9 @@ app.post("/nonSds", async (request, response) => {
 app.put("/nonSds/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await nonSdsSection.findByIdAndUpdate(
-      id,
-      req.body,
-      {
-        new: true,
-      }
-    );
+    let updatedData = await nonSdsSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -5168,10 +5149,9 @@ app.put("/nonSds/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
 //
-
 
 app.get("/sds", async (request, response) => {
   try {
@@ -5196,13 +5176,9 @@ app.post("/sds", async (request, response) => {
 app.put("/sds/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await sdsSection.findByIdAndUpdate(
-      id,
-      req.body,
-      {
-        new: true,
-      }
-    );
+    let updatedData = await sdsSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -5211,7 +5187,7 @@ app.put("/sds/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
 ///
 app.get("/studyPermitMinors", async (request, response) => {
@@ -5252,7 +5228,7 @@ app.put("/studyPermitMinors/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
 
 ///
@@ -5279,13 +5255,9 @@ app.post("/extensionsDraft", async (request, response) => {
 app.put("/extensionsDraft/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await extensionSection.findByIdAndUpdate(
-      id,
-      req.body,
-      {
-        new: true,
-      }
-    );
+    let updatedData = await extensionSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -5294,11 +5266,8 @@ app.put("/extensionsDraft/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
-
-
-
 
 ///
 app.get("/flagpoling", async (request, response) => {
@@ -5324,13 +5293,9 @@ app.post("/flagpoling", async (request, response) => {
 app.put("/flagpoling/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await flagpolingSection.findByIdAndUpdate(
-      id,
-      req.body,
-      {
-        new: true,
-      }
-    );
+    let updatedData = await flagpolingSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -5339,9 +5304,8 @@ app.put("/flagpoling/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
-
 
 ///
 app.get("/restorationStatus", async (request, response) => {
@@ -5382,7 +5346,7 @@ app.put("/restorationStatus/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
 /////
 ///
@@ -5424,7 +5388,7 @@ app.put("/spousalOpenWorkPermit/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
 /////
 ///
@@ -5466,7 +5430,7 @@ app.put("/commonLawPartnerPermanent/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
 /////
 ///
@@ -5508,7 +5472,7 @@ app.put("/commonLawPartnerTemporary/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
 /////
 ///
@@ -5535,13 +5499,9 @@ app.post("/superVisa", async (request, response) => {
 app.put("/superVisa/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await superVisaSection.findByIdAndUpdate(
-      id,
-      req.body,
-      {
-        new: true,
-      }
-    );
+    let updatedData = await superVisaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -5550,7 +5510,7 @@ app.put("/superVisa/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
 ///
 app.get("/temporaryResidentPermit", async (request, response) => {
@@ -5591,7 +5551,7 @@ app.put("/temporaryResidentPermit/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
 /////
 ///
@@ -5633,7 +5593,7 @@ app.put("/temporaryResidency/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
 /////
 ///
@@ -5660,13 +5620,9 @@ app.post("/visitorVisa", async (request, response) => {
 app.put("/visitorVisa/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await visitorVisaSection.findByIdAndUpdate(
-      id,
-      req.body,
-      {
-        new: true,
-      }
-    );
+    let updatedData = await visitorVisaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -5675,7 +5631,7 @@ app.put("/visitorVisa/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
 ///
 app.get("/buisinessVisitorVisa", async (request, response) => {
@@ -5716,7 +5672,7 @@ app.put("/buisinessVisitorVisa/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
 ///
 app.get("/dualIntetVisa", async (request, response) => {
@@ -5757,7 +5713,7 @@ app.put("/dualIntetVisa/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
 
 ///
@@ -5799,7 +5755,7 @@ app.put("/canadianExperienceClass/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 //
 
 ///
@@ -5841,7 +5797,7 @@ app.put("/federalSkilledTradedProgam/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 
 ///
 app.get("/federalSkilledWorkerProgam", async (request, response) => {
@@ -5882,9 +5838,8 @@ app.put("/federalSkilledWorkerProgam/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
+});
 ////
-
 
 app.get("/frenchTargatedDraw", async (request, response) => {
   try {
@@ -5924,8 +5879,7 @@ app.put("/frenchTargatedDraw/:id", async (req, res) => {
     console.log(error);
     res.status(500).json({ message: error.message });
   }
-})
-
+});
 
 //
 app.get("/health-authority-stream", async (request, response) => {
@@ -6163,9 +6117,13 @@ app.post("/healthcareTargatedDraw", async (request, response) => {
 app.put("/healthcareTargatedDraw/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await healthcareTargatedDrawSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await healthcareTargatedDrawSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -6239,9 +6197,13 @@ app.post("/stemTagatedDraw", async (request, response) => {
 app.put("/stemTagatedDraw/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await stemTargetedDrawSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await stemTargetedDrawSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -6277,9 +6239,13 @@ app.post("/tradeOccupationTargetedDraw", async (request, response) => {
 app.put("/tradeOccupationTargetedDraw/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await tradeOccupationTargDrawSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await tradeOccupationTargDrawSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -6289,7 +6255,6 @@ app.put("/tradeOccupationTargetedDraw/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
 
 ///
 
@@ -6316,9 +6281,13 @@ app.post("/transportOccupaationTargetedDraw", async (request, response) => {
 app.put("/transportOccupaationTargetedDraw/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await transportOccupationSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await transportOccupationSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -6354,9 +6323,13 @@ app.post("/pilotProgram", async (request, response) => {
 app.put("/pilotProgram/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await pilotProgramSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await pilotProgramSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -6366,7 +6339,6 @@ app.put("/pilotProgram/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
 
 ///
 
@@ -6393,9 +6365,13 @@ app.post("/agiFoodPilotProgram", async (request, response) => {
 app.put("/agiFoodPilotProgram/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await agriFoodPilotSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await agriFoodPilotSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -6444,7 +6420,6 @@ app.put("/rnip-page/:id", async (req, res) => {
   }
 });
 
-
 ///
 
 app.get("/spouseCommomlawSponsership", async (request, response) => {
@@ -6470,9 +6445,13 @@ app.post("/spouseCommomlawSponsership", async (request, response) => {
 app.put("/spouseCommomlawSponsership/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await spouseCommLawSponSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await spouseCommLawSponSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -6482,7 +6461,6 @@ app.put("/spouseCommomlawSponsership/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
 
 ///
 
@@ -6509,9 +6487,13 @@ app.post("/agricultureAgriFoodOccupation", async (request, response) => {
 app.put("/agricultureAgriFoodOccupation/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await agricultAndAgriFoodOccuSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await agricultAndAgriFoodOccuSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -6521,8 +6503,6 @@ app.put("/agricultureAgriFoodOccupation/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
-
 
 ///
 
@@ -6549,9 +6529,13 @@ app.post("/addDocMeta", async (request, response) => {
 app.put("/addDocMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await additionalDocumentMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await additionalDocumentMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -6561,8 +6545,6 @@ app.put("/addDocMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
-
 
 ///
 
@@ -6589,9 +6571,13 @@ app.post("/adopMeta", async (request, response) => {
 app.put("/adopMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await adoptionMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await adoptionMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -6601,9 +6587,6 @@ app.put("/adopMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
-
-
 
 ///
 
@@ -6630,9 +6613,10 @@ app.post("/agricultAndAgriFoodOccuMeta", async (request, response) => {
 app.put("/agricultAndAgriFoodOccuMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await agricultAndAgriFoodOccuMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData =
+      await agricultAndAgriFoodOccuMetaSection.findByIdAndUpdate(id, req.body, {
+        new: true,
+      });
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -6642,7 +6626,6 @@ app.put("/agricultAndAgriFoodOccuMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
 
 ///
 
@@ -6669,9 +6652,13 @@ app.post("/agriFoodPilotProgMeta", async (request, response) => {
 app.put("/agriFoodPilotProgMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await agriFoodPilotProgMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await agriFoodPilotProgMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -6681,8 +6668,6 @@ app.put("/agriFoodPilotProgMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
-
 
 ///
 
@@ -6722,8 +6707,6 @@ app.put("/bcPNPMeta/:id", async (req, res) => {
   }
 });
 
-
-
 ///
 
 app.get("/bridgingOpenWorkMeta", async (request, response) => {
@@ -6749,9 +6732,13 @@ app.post("/bridgingOpenWorkMeta", async (request, response) => {
 app.put("/bridgingOpenWorkMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await bridgingOpenWorkMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await bridgingOpenWorkMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -6762,9 +6749,7 @@ app.put("/bridgingOpenWorkMeta/:id", async (req, res) => {
   }
 });
 
-
 ///
-
 
 app.get("/buisinessVisitorVisaMeta", async (request, response) => {
   try {
@@ -6789,9 +6774,13 @@ app.post("/buisinessVisitorVisaMeta", async (request, response) => {
 app.put("/buisinessVisitorVisaMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await buisinessVisitorVisaMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await buisinessVisitorVisaMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -6802,9 +6791,7 @@ app.put("/buisinessVisitorVisaMeta/:id", async (req, res) => {
   }
 });
 
-
 ///
-
 
 app.get("/canadianExperienceClassMeta", async (request, response) => {
   try {
@@ -6829,9 +6816,10 @@ app.post("/canadianExperienceClassMeta", async (request, response) => {
 app.put("/canadianExperienceClassMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await canadianExperienceClassMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData =
+      await canadianExperienceClassMetaSection.findByIdAndUpdate(id, req.body, {
+        new: true,
+      });
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -6842,11 +6830,7 @@ app.put("/canadianExperienceClassMeta/:id", async (req, res) => {
   }
 });
 
-
-
-
 ///
-
 
 app.get("/changeCollegeProgMeta", async (request, response) => {
   try {
@@ -6871,9 +6855,13 @@ app.post("/changeCollegeProgMeta", async (request, response) => {
 app.put("/changeCollegeProgMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await changeCollegeProgMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await changeCollegeProgMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -6884,12 +6872,7 @@ app.put("/changeCollegeProgMeta/:id", async (req, res) => {
   }
 });
 
-
-
-
-
 ///
-
 
 app.get("/citizenshipMeta", async (request, response) => {
   try {
@@ -6914,9 +6897,13 @@ app.post("/citizenshipMeta", async (request, response) => {
 app.put("/citizenshipMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await citizenshipMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await citizenshipMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -6927,10 +6914,7 @@ app.put("/citizenshipMeta/:id", async (req, res) => {
   }
 });
 
-
-
 ///
-
 
 app.get("/comLawPartPermanMeta", async (request, response) => {
   try {
@@ -6955,9 +6939,13 @@ app.post("/comLawPartPermanMeta", async (request, response) => {
 app.put("/comLawPartPermanMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await comLawPartPermanMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await comLawPartPermanMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -6968,10 +6956,7 @@ app.put("/comLawPartPermanMeta/:id", async (req, res) => {
   }
 });
 
-
-
 ///
-
 
 app.get("/comLawPartTempMeta", async (request, response) => {
   try {
@@ -6996,9 +6981,13 @@ app.post("/comLawPartTempMeta", async (request, response) => {
 app.put("/comLawPartTempMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await comLawPartTempMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await comLawPartTempMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7009,9 +6998,7 @@ app.put("/comLawPartTempMeta/:id", async (req, res) => {
   }
 });
 
-
 ///
-
 
 app.get("/dependentChildMeta", async (request, response) => {
   try {
@@ -7036,9 +7023,13 @@ app.post("/dependentChildMeta", async (request, response) => {
 app.put("/dependentChildMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await dependentChildMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await dependentChildMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7050,7 +7041,6 @@ app.put("/dependentChildMeta/:id", async (req, res) => {
 });
 
 ///
-
 
 app.get("/dualintentVisaMeta", async (request, response) => {
   try {
@@ -7075,9 +7065,13 @@ app.post("/dualintentVisaMeta", async (request, response) => {
 app.put("/dualintentVisaMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await dualintentVisaMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await dualintentVisaMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7088,10 +7082,7 @@ app.put("/dualintentVisaMeta/:id", async (req, res) => {
   }
 });
 
-
-
 ///
-
 
 app.get("/entryLevelSemiSkilledMeta", async (request, response) => {
   try {
@@ -7116,9 +7107,13 @@ app.post("/entryLevelSemiSkilledMeta", async (request, response) => {
 app.put("/entryLevelSemiSkilledMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await entryLevelSemiSkilledMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await entryLevelSemiSkilledMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7129,10 +7124,7 @@ app.put("/entryLevelSemiSkilledMeta/:id", async (req, res) => {
   }
 });
 
-
-
 ///
-
 
 app.get("/extensionMeta", async (request, response) => {
   try {
@@ -7157,9 +7149,13 @@ app.post("/extensionMeta", async (request, response) => {
 app.put("/extensionMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await extensionMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await extensionMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7170,10 +7166,7 @@ app.put("/extensionMeta/:id", async (req, res) => {
   }
 });
 
-
-
 ///
-
 
 app.get("/familyReunificationMeta", async (request, response) => {
   try {
@@ -7198,9 +7191,13 @@ app.post("/familyReunificationMeta", async (request, response) => {
 app.put("/familyReunificationMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await familyReunificationMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await familyReunificationMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7212,7 +7209,6 @@ app.put("/familyReunificationMeta/:id", async (req, res) => {
 });
 
 ///
-
 
 app.get("/federalSkillTradesProgMeta", async (request, response) => {
   try {
@@ -7237,9 +7233,13 @@ app.post("/federalSkillTradesProgMeta", async (request, response) => {
 app.put("/federalSkillTradesProgMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await federalSkillTradesProgMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await federalSkillTradesProgMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7250,11 +7250,7 @@ app.put("/federalSkillTradesProgMeta/:id", async (req, res) => {
   }
 });
 
-
-
-
 ///
-
 
 app.get("/federalSkillWorkerProgMeta", async (request, response) => {
   try {
@@ -7279,9 +7275,13 @@ app.post("/federalSkillWorkerProgMeta", async (request, response) => {
 app.put("/federalSkillWorkerProgMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await federalSkillWorkerProgMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await federalSkillWorkerProgMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7292,10 +7292,7 @@ app.put("/federalSkillWorkerProgMeta/:id", async (req, res) => {
   }
 });
 
-
-
 ///
-
 
 app.get("/flagpolingMeta", async (request, response) => {
   try {
@@ -7320,9 +7317,13 @@ app.post("/flagpolingMeta", async (request, response) => {
 app.put("/flagpolingMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await flagpolingMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await flagpolingMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7333,10 +7334,7 @@ app.put("/flagpolingMeta/:id", async (req, res) => {
   }
 });
 
-
-
 ///
-
 
 app.get("/francophoneMobilityMeta", async (request, response) => {
   try {
@@ -7361,9 +7359,13 @@ app.post("/francophoneMobilityMeta", async (request, response) => {
 app.put("/francophoneMobilityMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await francophoneMobilityMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await francophoneMobilityMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7374,10 +7376,7 @@ app.put("/francophoneMobilityMeta/:id", async (req, res) => {
   }
 });
 
-
-
 ///
-
 
 app.get("/frenchTargetedDrawMeta", async (request, response) => {
   try {
@@ -7402,9 +7401,13 @@ app.post("/frenchTargetedDrawMeta", async (request, response) => {
 app.put("/frenchTargetedDrawMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await frenchTargetedDrawMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await frenchTargetedDrawMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7415,10 +7418,7 @@ app.put("/frenchTargetedDrawMeta/:id", async (req, res) => {
   }
 });
 
-
-
 ///
-
 
 app.get("/globalStreamLmiaMeta", async (request, response) => {
   try {
@@ -7443,9 +7443,13 @@ app.post("/globalStreamLmiaMeta", async (request, response) => {
 app.put("/globalStreamLmiaMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await globalStreamLmiaMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await globalStreamLmiaMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7456,10 +7460,7 @@ app.put("/globalStreamLmiaMeta/:id", async (req, res) => {
   }
 });
 
-
-
 ///
-
 
 app.get("/healthAuthorityStreamMeta", async (request, response) => {
   try {
@@ -7484,9 +7485,13 @@ app.post("/healthAuthorityStreamMeta", async (request, response) => {
 app.put("/healthAuthorityStreamMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await healthAuthorityStreamMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await healthAuthorityStreamMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7497,11 +7502,7 @@ app.put("/healthAuthorityStreamMeta/:id", async (req, res) => {
   }
 });
 
-
-
-
 ///
-
 
 app.get("/healthcareTargatedDrawMeta", async (request, response) => {
   try {
@@ -7526,9 +7527,13 @@ app.post("/healthcareTargatedDrawMeta", async (request, response) => {
 app.put("/healthcareTargatedDrawMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await healthcareTargatedDrawMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await healthcareTargatedDrawMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7539,9 +7544,7 @@ app.put("/healthcareTargatedDrawMeta/:id", async (req, res) => {
   }
 });
 
-
 ///
-
 
 app.get("/humanitarianComMeta", async (request, response) => {
   try {
@@ -7566,9 +7569,13 @@ app.post("/humanitarianComMeta", async (request, response) => {
 app.put("/humanitarianComMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await humanitarianComMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await humanitarianComMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7579,9 +7586,7 @@ app.put("/humanitarianComMeta/:id", async (req, res) => {
   }
 });
 
-
 ///
-
 
 app.get("/inHomeCaregiverProgramLpMeta", async (request, response) => {
   try {
@@ -7606,9 +7611,14 @@ app.post("/inHomeCaregiverProgramLpMeta", async (request, response) => {
 app.put("/inHomeCaregiverProgramLpMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await inHomeCaregiverProgramLpMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData =
+      await inHomeCaregiverProgramLpMetaSection.findByIdAndUpdate(
+        id,
+        req.body,
+        {
+          new: true,
+        }
+      );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7619,10 +7629,7 @@ app.put("/inHomeCaregiverProgramLpMeta/:id", async (req, res) => {
   }
 });
 
-
-
 ///
-
 
 app.get("/insideCanadaMeta", async (request, response) => {
   try {
@@ -7647,9 +7654,13 @@ app.post("/insideCanadaMeta", async (request, response) => {
 app.put("/insideCanadaMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await insideCanadaMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await insideCanadaMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7660,9 +7671,7 @@ app.put("/insideCanadaMeta/:id", async (req, res) => {
   }
 });
 
-
 ///
-
 
 app.get("/internationalGraduateProgMeta", async (request, response) => {
   try {
@@ -7687,9 +7696,14 @@ app.post("/internationalGraduateProgMeta", async (request, response) => {
 app.put("/internationalGraduateProgMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await internationalGraduateProgMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData =
+      await internationalGraduateProgMetaSection.findByIdAndUpdate(
+        id,
+        req.body,
+        {
+          new: true,
+        }
+      );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7700,10 +7714,7 @@ app.put("/internationalGraduateProgMeta/:id", async (req, res) => {
   }
 });
 
-
-
 ///
-
 
 app.get("/internationalPostGraduateProgMeta", async (request, response) => {
   try {
@@ -7717,7 +7728,9 @@ app.get("/internationalPostGraduateProgMeta", async (request, response) => {
 
 app.post("/internationalPostGraduateProgMeta", async (request, response) => {
   try {
-    let data = await internationalPostGraduateProgMetaSection.create(request.body);
+    let data = await internationalPostGraduateProgMetaSection.create(
+      request.body
+    );
     response.status(200).json(data);
   } catch (error) {
     console.log(error);
@@ -7728,9 +7741,14 @@ app.post("/internationalPostGraduateProgMeta", async (request, response) => {
 app.put("/internationalPostGraduateProgMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await internationalPostGraduateProgMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData =
+      await internationalPostGraduateProgMetaSection.findByIdAndUpdate(
+        id,
+        req.body,
+        {
+          new: true,
+        }
+      );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7741,10 +7759,7 @@ app.put("/internationalPostGraduateProgMeta/:id", async (req, res) => {
   }
 });
 
-
-
 ///
-
 
 app.get("/LmiaMeta", async (request, response) => {
   try {
@@ -7782,10 +7797,7 @@ app.put("/LmiaMeta/:id", async (req, res) => {
   }
 });
 
-
-
 ///
-
 
 app.get("/lonelyCanadianMeta", async (request, response) => {
   try {
@@ -7810,9 +7822,13 @@ app.post("/lonelyCanadianMeta", async (request, response) => {
 app.put("/lonelyCanadianMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await lonelyCanadianMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await lonelyCanadianMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7823,9 +7839,7 @@ app.put("/lonelyCanadianMeta/:id", async (req, res) => {
   }
 });
 
-
 ///
-
 
 app.get("/nonSdsMeta", async (request, response) => {
   try {
@@ -7863,7 +7877,6 @@ app.put("/nonSdsMeta/:id", async (req, res) => {
   }
 });
 
-
 //
 
 app.get("/openWorkDependentChildMeta", async (request, response) => {
@@ -7889,9 +7902,13 @@ app.post("/openWorkDependentChildMeta", async (request, response) => {
 app.put("/openWorkDependentChildMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await openWorkDependentChildMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await openWorkDependentChildMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7901,8 +7918,6 @@ app.put("/openWorkDependentChildMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
-
 
 //
 
@@ -7929,9 +7944,13 @@ app.post("/openWorkPerMeta", async (request, response) => {
 app.put("/openWorkPerMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await openWorkPerMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await openWorkPerMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7941,8 +7960,6 @@ app.put("/openWorkPerMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
-
 
 //
 
@@ -7969,9 +7986,13 @@ app.post("/openWorkVulnerableMeta", async (request, response) => {
 app.put("/openWorkVulnerableMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await openWorkVulnerableMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await openWorkVulnerableMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -7981,8 +8002,6 @@ app.put("/openWorkVulnerableMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
-
 
 //
 
@@ -8022,9 +8041,6 @@ app.put("/orphanMeta/:id", async (req, res) => {
   }
 });
 
-
-
-
 //
 
 app.get("/outsideCanadaMeta", async (request, response) => {
@@ -8050,9 +8066,13 @@ app.post("/outsideCanadaMeta", async (request, response) => {
 app.put("/outsideCanadaMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await outsideCanadaMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await outsideCanadaMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -8062,10 +8082,6 @@ app.put("/outsideCanadaMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
-
-
-
 
 //
 
@@ -8092,9 +8108,13 @@ app.post("/parentsGrandParMeta", async (request, response) => {
 app.put("/parentsGrandParMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await parentsGrandParMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await parentsGrandParMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -8104,9 +8124,6 @@ app.put("/parentsGrandParMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
-
-
 
 //
 
@@ -8133,9 +8150,13 @@ app.post("/pathwaysForCaregiverMeta", async (request, response) => {
 app.put("/pathwaysForCaregiverMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await pathwaysForCaregiverMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await pathwaysForCaregiverMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -8145,7 +8166,6 @@ app.put("/pathwaysForCaregiverMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
 
 //
 
@@ -8185,8 +8205,6 @@ app.put("/pgwpMeta/:id", async (req, res) => {
   }
 });
 
-
-
 //
 
 app.get("/pilotProgramMeta", async (request, response) => {
@@ -8212,9 +8230,13 @@ app.post("/pilotProgramMeta", async (request, response) => {
 app.put("/pilotProgramMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await pilotProgramMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await pilotProgramMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -8263,8 +8285,6 @@ app.put("/pNPMeta/:id", async (req, res) => {
   }
 });
 
-
-
 //
 
 app.get("/prioritiesProgramMeta", async (request, response) => {
@@ -8290,9 +8310,13 @@ app.post("/prioritiesProgramMeta", async (request, response) => {
 app.put("/prioritiesProgramMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await prioritiesProgramMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await prioritiesProgramMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -8302,9 +8326,6 @@ app.put("/prioritiesProgramMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
-
-
 
 //
 
@@ -8331,9 +8352,13 @@ app.post("/prPathCareLpMeta", async (request, response) => {
 app.put("/prPathCareLpMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await prPathCareLpMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await prPathCareLpMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -8369,9 +8394,13 @@ app.post("/prRenewalMeta", async (request, response) => {
 app.put("/prRenewalMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await prRenewalMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await prRenewalMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -8381,8 +8410,6 @@ app.put("/prRenewalMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
-
 
 //
 
@@ -8409,9 +8436,13 @@ app.post("/reconsiderationMeta", async (request, response) => {
 app.put("/reconsiderationMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await reconsiderationMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await reconsiderationMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -8447,9 +8478,13 @@ app.post("/replyPFLMeta", async (request, response) => {
 app.put("/replyPFLMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await replyPFLMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await replyPFLMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -8459,7 +8494,6 @@ app.put("/replyPFLMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
 
 //
 
@@ -8486,9 +8520,13 @@ app.post("/restorationStatusDraftMeta", async (request, response) => {
 app.put("/restorationStatusDraftMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await restorationStatusDraftMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await restorationStatusDraftMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -8498,7 +8536,6 @@ app.put("/restorationStatusDraftMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
 
 //
 
@@ -8537,7 +8574,6 @@ app.put("/rNIPMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
 
 //
 
@@ -8602,9 +8638,13 @@ app.post("/skilledWorkerStreamMeta", async (request, response) => {
 app.put("/skilledWorkerStreamMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await skilledWorkerStreamMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await skilledWorkerStreamMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -8614,9 +8654,6 @@ app.put("/skilledWorkerStreamMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
-
-
 
 //
 
@@ -8643,9 +8680,13 @@ app.post("/spousalOpenWokPerMeta", async (request, response) => {
 app.put("/spousalOpenWokPerMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await spousalOpenWokPerMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await spousalOpenWokPerMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -8655,7 +8696,6 @@ app.put("/spousalOpenWokPerMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
 
 //
 
@@ -8682,9 +8722,13 @@ app.post("/spouseCommLawSponMeta", async (request, response) => {
 app.put("/spouseCommLawSponMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await spouseCommLawSponMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await spouseCommLawSponMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -8720,9 +8764,13 @@ app.post("/stemTargetedDrawMeta", async (request, response) => {
 app.put("/stemTargetedDrawMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await stemTargetedDrawMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await stemTargetedDrawMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -8758,9 +8806,13 @@ app.post("/studentVisaMeta", async (request, response) => {
 app.put("/studentVisaMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await studentVisaMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await studentVisaMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -8796,9 +8848,13 @@ app.post("/studyPermitMinorsMeta", async (request, response) => {
 app.put("/studyPermitMinorsMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await studyPermitMinorsMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await studyPermitMinorsMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -8834,9 +8890,13 @@ app.post("/superVisaMeta", async (request, response) => {
 app.put("/superVisaMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await superVisaMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await superVisaMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -8846,8 +8906,6 @@ app.put("/superVisaMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
-
 
 //
 
@@ -8874,9 +8932,13 @@ app.post("/temporaryResidencyMeta", async (request, response) => {
 app.put("/temporaryResidencyMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await temporaryResidencyMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await temporaryResidencyMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -8912,9 +8974,13 @@ app.post("/temporaryResidentPermMeta", async (request, response) => {
 app.put("/temporaryResidentPermMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await temporaryResidentPermMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await temporaryResidentPermMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -8924,7 +8990,6 @@ app.put("/temporaryResidentPermMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
 
 //
 
@@ -8951,9 +9016,10 @@ app.post("/tradeOccupationTargDrawMeta", async (request, response) => {
 app.put("/tradeOccupationTargDrawMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await tradeOccupationTargDrawMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData =
+      await tradeOccupationTargDrawMetaSection.findByIdAndUpdate(id, req.body, {
+        new: true,
+      });
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -8963,7 +9029,6 @@ app.put("/tradeOccupationTargDrawMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
 
 //
 
@@ -8990,9 +9055,14 @@ app.post("/transportOccuptionTargDrawMeta", async (request, response) => {
 app.put("/transportOccuptionTargDrawMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await transportOccuptionTargDrawMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData =
+      await transportOccuptionTargDrawMetaSection.findByIdAndUpdate(
+        id,
+        req.body,
+        {
+          new: true,
+        }
+      );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -9002,9 +9072,6 @@ app.put("/transportOccuptionTargDrawMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
-
-
 
 //
 
@@ -9031,9 +9098,13 @@ app.post("/visitorToStudentMeta", async (request, response) => {
 app.put("/visitorToStudentMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await visitorToStudentMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await visitorToStudentMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -9043,7 +9114,6 @@ app.put("/visitorToStudentMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
 
 //
 
@@ -9070,9 +9140,13 @@ app.post("/visitorVisaMeta", async (request, response) => {
 app.put("/visitorVisaMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await visitorVisaMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await visitorVisaMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -9082,8 +9156,6 @@ app.put("/visitorVisaMeta/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
-
 
 //
 
@@ -9110,9 +9182,13 @@ app.post("/workPermitMeta", async (request, response) => {
 app.put("/workPermitMeta/:id", async (req, res) => {
   try {
     let { id } = req.params;
-    let updatedData = await workPermitMetaSection.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
+    let updatedData = await workPermitMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -9123,12 +9199,11 @@ app.put("/workPermitMeta/:id", async (req, res) => {
   }
 });
 
-
-
-
 mongoose.set("strictQuery", false);
 mongoose
-  .connect(process.env.MONGO_CLI)
+  .connect(process.env.MONGO_CLI, {
+    socketTimeoutMS: 120000,
+  })
   .then(async () => {
     app.listen(port, () => {
       console.log(`App running on ${port}`);
