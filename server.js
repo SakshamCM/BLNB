@@ -207,6 +207,13 @@ const transportOccuptionTargDrawMetaSection = require("./models/about_us_page/in
 const visitorToStudentMetaSection = require("./models/about_us_page/innerPages/metas/visitorToStudentMeta");
 const visitorVisaMetaSection = require("./models/about_us_page/innerPages/metas/visitorVisaMeta");
 const workPermitMetaSection = require("./models/about_us_page/innerPages/metas/workPermitMeta");
+const lowWageLmiaMetaSection = require("./models/about_us_page/innerPages/metas/lowWageLmiaMeta");
+const moreServicesMetaSection = require("./models/about_us_page/innerPages/metas/moreServicesMeta");
+const newsPageMetaSection = require("./models/about_us_page/innerPages/metas/newsMeta");
+const previousDrawHistoryMetaSection = require("./models/about_us_page/innerPages/metas/previousDrawHistoryMeta");
+const sameSexMetaSection = require("./models/about_us_page/innerPages/metas/sameSexMeta");
+const spousalInlandMetaSection = require("./models/about_us_page/innerPages/metas/spousalInlandMeta");
+const spousalOutlandMetaSection = require("./models/about_us_page/innerPages/metas/spousalOutlandMeta");
 
 let port = 4000;
 
@@ -9199,6 +9206,310 @@ app.put("/workPermitMeta/:id", async (req, res) => {
   }
 });
 
+//
+app.get("/lowWageLmiaMeta", async (request, response) => {
+  try {
+    let data = await lowWageLmiaMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/lowWageLmiaMeta", async (request, response) => {
+  try {
+    let data = await lowWageLmiaMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/lowWageLmiaMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await lowWageLmiaMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+///
+
+//
+app.get("/moreServicesMeta", async (request, response) => {
+  try {
+    let data = await moreServicesMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/moreServicesMeta", async (request, response) => {
+  try {
+    let data = await moreServicesMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/moreServicesMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await moreServicesMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+///
+//
+
+app.get("/newsPageMeta", async (request, response) => {
+  try {
+    let data = await newsPageMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/newsPageMeta", async (request, response) => {
+  try {
+    let data = await newsPageMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/newsPageMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await newsPageMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+///
+
+//
+
+app.get("/previousDrawHistoryMeta", async (request, response) => {
+  try {
+    let data = await previousDrawHistoryMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/previousDrawHistoryMeta", async (request, response) => {
+  try {
+    let data = await previousDrawHistoryMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/previousDrawHistoryMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await previousDrawHistoryMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+///
+
+
+
+//
+
+app.get("/sameSexMeta", async (request, response) => {
+  try {
+    let data = await sameSexMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/sameSexMeta", async (request, response) => {
+  try {
+    let data = await sameSexMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/sameSexMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await sameSexMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+///
+
+
+
+//
+
+app.get("/spousalInlandMeta", async (request, response) => {
+  try {
+    let data = await spousalInlandMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/spousalInlandMeta", async (request, response) => {
+  try {
+    let data = await spousalInlandMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/spousalInlandMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await spousalInlandMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+///
+
+
+
+//
+
+app.get("/spousalOutlandMeta", async (request, response) => {
+  try {
+    let data = await spousalOutlandMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/spousalOutlandMeta", async (request, response) => {
+  try {
+    let data = await spousalOutlandMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/spousalOutlandMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await spousalOutlandMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+///
+
 mongoose.set("strictQuery", false);
 mongoose
   .connect(process.env.MONGO_CLI, {
@@ -9210,8 +9521,8 @@ mongoose
     });
 
     // try {
-    //   const doc = await workPermitMetaSection.create({});
-    //   console.log("Document created with default values: workPermitMetaSection");
+    //   const doc = await spousalOutlandMetaSection.create({});
+    //   console.log("Document created with default values: spousalOutlandMetaSection");
     // } catch (err) {
     //   console.error("Error creating document:", err);
     // }
