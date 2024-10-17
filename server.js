@@ -221,6 +221,8 @@ const cbySection = require("./models/about_us_page/innerPages/cby");
 const cbyMetaSection = require("./models/about_us_page/innerPages/metas/cbyMeta");
 const permanentResidencyPathwayCaregiverSection = require("./models/about_us_page/innerPages/permanentResidencyPathwayCaregiver");
 const permanResidPathCareMetaSection = require("./models/about_us_page/innerPages/metas/permanResidPathCareMeta");
+const categoryBasedExpressMetaSection = require("./models/about_us_page/innerPages/metas/categoryBasedExpressMeta");
+const categoryBasedExpressSection = require("./models/about_us_page/innerPages/categoryBasedExpress");
 
 let port = 4000;
 
@@ -9813,6 +9815,94 @@ app.put("/permanResidPathCareMeta/:id", async (req, res) => {
   }
 });
 
+//
+
+//
+
+app.get("/categoryBasedExpress", async (request, response) => {
+  try {
+    let data = await categoryBasedExpressSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/categoryBasedExpress", async (request, response) => {
+  try {
+    let data = await categoryBasedExpressSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/categoryBasedExpress/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await categoryBasedExpressSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+//
+
+app.get("/categoryBasedExpressMeta", async (request, response) => {
+  try {
+    let data = await categoryBasedExpressMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/categoryBasedExpressMeta", async (request, response) => {
+  try {
+    let data = await categoryBasedExpressMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/categoryBasedExpressMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await categoryBasedExpressMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+//
+
+
 mongoose.set("strictQuery", false);
 mongoose
   .connect(process.env.MONGO_CLI, {
@@ -9824,8 +9914,8 @@ mongoose
     });
 
     // try {
-    //   const doc = await permanResidPathCareMetaSection.create({});
-    //   console.log("Document created with default values: permanResidPathCareMetaSection");
+    //   const doc = await categoryBasedExpressMetaSection.create({});
+    //   console.log("Document created with default values: categoryBasedExpressMetaSection");
     // } catch (err) {
     //   console.error("Error creating document:", err);
     // }
