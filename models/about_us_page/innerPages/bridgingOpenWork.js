@@ -118,15 +118,15 @@ let bridgingOpenSchema = mongoose.Schema(
             type: String,
             default: "Federal skilled worker class (FSWC)",
           }, 
-          Eligibility12SubList1: {
+          Eligibility12SubList2: {
             type: String,
             default: "Canadian experience class (CEC)",
           }, 
-          Eligibility12SubList1: {
+          Eligibility12SubList3: {
             type: String,
             default: "Federal skilled trades class (FSTC)",
           }, 
-          Eligibility12SubList1: {
+          Eligibility12SubList4: {
             type: String,
             default: "Provincial Nominee Program (PNP), where the applicant is accepted through the provincial or territorial Express Entry stream.",
           }, 
