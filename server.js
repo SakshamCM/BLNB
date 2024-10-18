@@ -224,7 +224,7 @@ const permanResidPathCareMetaSection = require("./models/about_us_page/innerPage
 const categoryBasedExpressMetaSection = require("./models/about_us_page/innerPages/metas/categoryBasedExpressMeta");
 const categoryBasedExpressSection = require("./models/about_us_page/innerPages/categoryBasedExpress");
 const agricultureStreamLmiaMetaSection = require("./models/about_us_page/innerPages/metas/agricultureStreamLmiaMeta");
-const comLawPartnerInternSection = require("./models/about_us_page/innerPages/comlawPartnerIntern");
+const comLawPartnerInternSection = require("./models/about_us_page/innerPages/comLawPartnerIntern");
 const comLawPartnerInternMetaSection = require("./models/about_us_page/innerPages/metas/comLawPartnerInternMeta");
 
 let port = 4000;
