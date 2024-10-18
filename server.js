@@ -223,6 +223,9 @@ const permanentResidencyPathwayCaregiverSection = require("./models/about_us_pag
 const permanResidPathCareMetaSection = require("./models/about_us_page/innerPages/metas/permanResidPathCareMeta");
 const categoryBasedExpressMetaSection = require("./models/about_us_page/innerPages/metas/categoryBasedExpressMeta");
 const categoryBasedExpressSection = require("./models/about_us_page/innerPages/categoryBasedExpress");
+const agricultureStreamLmiaMetaSection = require("./models/about_us_page/innerPages/metas/agricultureStreamLmiaMeta");
+const comLawPartnerInternSection = require("./models/about_us_page/innerPages/comlawPartnerIntern");
+const comLawPartnerInternMetaSection = require("./models/about_us_page/innerPages/metas/comLawPartnerInternMeta");
 
 let port = 4000;
 
@@ -6687,6 +6690,88 @@ app.put("/agriFoodPilotProgMeta/:id", async (req, res) => {
 
 ///
 
+
+///
+
+app.get("/agricultureStreamLmiaMeta", async (request, response) => {
+  try {
+    let data = await agricultureStreamLmiaMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/agricultureStreamLmiaMeta", async (request, response) => {
+  try {
+    let data = await agricultureStreamLmiaMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/agricultureStreamLmiaMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await agricultureStreamLmiaMetaSection.findByIdAndUpdate(
+      id,
+      req.body,
+      {
+        new: true,
+      }
+    );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+//
+///
+
+app.get("/comLawPartnerIntern", async (request, response) => {
+  try {
+    let data = await comLawPartnerInternSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/comLawPartnerIntern", async (request, response) => {
+  try {
+    let data = await comLawPartnerInternSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/comLawPartnerIntern/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await comLawPartnerInternSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
 app.get("/bcPNPMeta", async (request, response) => {
   try {
     let data = await bcPNPMetaSection.find();
@@ -7004,6 +7089,44 @@ app.put("/comLawPartTempMeta/:id", async (req, res) => {
         new: true,
       }
     );
+    if (!updatedData) {
+      return res.status(404).json({ message: "Data not found" });
+    }
+    res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+///
+
+app.get("/comLawPartnerInternMeta", async (request, response) => {
+  try {
+    let data = await comLawPartnerInternMetaSection.find();
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.post("/comLawPartnerInternMeta", async (request, response) => {
+  try {
+    let data = await comLawPartnerInternMetaSection.create(request.body);
+    response.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json({ message: error });
+  }
+});
+
+app.put("/comLawPartnerInternMeta/:id", async (req, res) => {
+  try {
+    let { id } = req.params;
+    let updatedData = await comLawPartnerInternMetaSection.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
     if (!updatedData) {
       return res.status(404).json({ message: "Data not found" });
     }
@@ -9914,8 +10037,8 @@ mongoose
     });
 
     // try {
-    //   const doc = await categoryBasedExpressMetaSection.create({});
-    //   console.log("Document created with default values: categoryBasedExpressMetaSection");
+    //   const doc = await comLawPartnerInternMetaSection.create({});
+    //   console.log("Document created with default values: comLawPartnerInternMetaSection");
     // } catch (err) {
     //   console.error("Error creating document:", err);
     // }
